@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> May - Finding Roots </title>
+	<link rel="stylesheet" href="css/common.css" type="text/css" />
+	<link rel="stylesheet" href="css/responsive.css" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet"/>
+	<link rel="icon" type="image/png" href="/johanc/img/Favicon.png" />
+</head>
+
+<style = "css">
+	body {
+		max-width: 65%;
+		margin: auto;
+		background-color: white;
+		font-family: 'Roboto', sans-serif;
+	}
+	h1 {
+		padding-top: 0.5em;
+		max-width: 100%;
+		margin: auto;
+	}
+	h2 {
+		max-width: 100%;
+		margin: auto;
+		font-size: 20px;
+		padding-top:1em;
+	}
+	p {
+		max-width: 100%;
+		margin: auto;
+		line-height: 1.5em;
+		font-family: 'Roboto', sans-serif;
+		text-align: left;
+		font-size: 15px;
+		padding-bottom: 10px;
+	}
+	img {
+		max-width: 100%;
+		display: block;
+		margin-left:auto;
+		margin-right: auto;
+	}
+	a { text-decoration: none; font-style: bold; }
+	a:link { color: red; }
+	a:visited { color: black; }
+	a:hover { color: #d00000; }
+	a:active { color: red; }
+	hr { opacity: 1.0; max-width: 85%;}
+	ol,ul {
+		max-width: 100%;
+		margin: auto;
+		font-size: 15px;
+	}
+	div.anect{
+		padding-top: 1em;
+		font-size: 15px;
+		padding-left: 2em;
+	}
+	div.note {
+		max-width: 100%;
+		line-height: 1.5em;
+		text-align: right;
+		font-size: 14px;
+		position: fixed;
+     	padding: 5px;
+     	bottom: 5px;
+     	right: 5px;
+     	background-color: gray;
+     	border: 1px solid #ffffff;
+     	color: #E6E6E6;
+	}
+
+	/* Video Stuff*/
+	div.VIDEO {
+		margin: 5px;
+		border: 1px solid #ccc;
+		width: 100%;
+	}
+	div.DESC {
+		padding: 15px;
+		text-align: center;
+	}
+	iframe.vid {width: 100%; height: 300px;}
+</style>
+
+<body link = "white">
+	<font color = "black">	
+	<!-- Actual Body -->
+
+	</br>
+	<h1>
+		May - Finding Roots
+	</h1>
+	</br>
+
+	<p>
+		(This essay used to be on a different month, but I rearranged things so now it's here for May!)
+	</p>
+		
+	<p>
+		I decided to talk about the roots of functions and give motivation to why we care about finding these things. In the last month of teaching Intermediate Algebra, I wanted to give motivation why we were looking at different methods to factor quadratic equations. It was spur of the moment, but it’s been nagging in my head that I should really write down (in)formally some reason why we care about roots. 
+	</p>
+
+	<h2> Tilling the Soil </h2>
+	<p>
+	</br>
+		<img src="http://drive.google.com/uc?id=1GgnznomvlH4QC35dWoUD6n2lZZZkEXen" alt = "cooking_doodle" class = "image">
+	</p>
+	<p></br>
+		“Roots” is actually just one name. It’s a cute term that works with the analogy for this essay. But, you may be more familiar with “zeros” or “solutions”. Let’s start with a simple function:
+		
+		<center><i>f(x) = ax</i></center></br>
+
+		where where <i>x</i> is the input variable and <i>a</i> is just some other number. If you forgot what a function is, you're in luck because I wrote about it before for <a href="https://johanmcs.github.io/johanc/writings/functions" target = "_blank"><b>October - Lost in the Fun(ctions)</b></a>.
+	</p>
+
+	<p>
+		When we ask for the roots of this function, we are asking the question “what input <i>x</i> makes this function zero?” More mathematically, we are asking to solve the equation:
+
+		<center><i>0 = ax</i> . </center></br>
+
+		If <i>a</i> is not zero, then this equation is only true when (or the solution is) <i>x</i> equals zero. So, this simple function has one root at <i>x = 0</i>. If <i>a</i> is equal to zero, then this function has infinitely many roots, because no matter what input you give, it will always be zero.
+	</p>
+
+	<p>
+		So, roots are the inputs that make a function equal to zero. But, why is that important? Why do we care when something equals zero?
+	</p>
+
+	<h2> Watering the Crops </h2>
+	<p></br>
+		Before I give my answer and philosophy for it, this is supposed to be an exploration of new math ideas for me. So, walk with me through the different “root-finding” methods smarter people have come up with. To practice my video lecture skills, I opted to include video explanations for this section! This will be the first public video lesson!!
+	</p>
+
+	<p>
+		I need to make some assumptions about the function <i>f(x)</i> we're dealing with. A function is continuous if you can take a pen and draw the graph of the function without ever lifting your pen. This gives us something very special, the Intermediate Value Theorem, which states </br>
+
+		<div class="anect">
+			Suppose a function <i>f(x)</i> is continuous on <i> a ≤ x ≤ b</i>. If <i>y</i> is between <i>f(a)</i> and <i>f(b)</i>, then there exists a <i>c</i> between <i>a</i> and <i>b</i> such that <i>f(c) = y</i>.
+		</div> </br>
+	</p>
+
+	<p>
+		<img src="http://drive.google.com/uc?id=1G0pLt82XTd8WUQNSxWKGvfLeAs-XCppt" alt = "cooking_doodle" class = "image">
+	</p>
+
+	<p>
+		In less math-y terms, if your function is continuous, then it cannot skip a number between the outputs. There is always an input value for every output value between the region! This is extremely useful. In our case, if our function is positive on one end and negative on the other, then that means zero is in the output and so there's a <i>c</i> between <i>a</i> and <i>b</i> such that <i>f(c) = 0</i>.
+	</p>
+	
+	<p>
+		To make things interesting, we'll assume on the left end, we're positive, and on the right end, we're negative! Alright, let's tackle two methods.
+	</p>
+
+	</br>
+	
+	<p>
+		<i>Bisection Method</i></br>
+		<div class="VIDEO">
+		<iframe class="vid" src="https://www.youtube.com/embed/RtAiCMMOeBA"></iframe>
+		</div>
+	</p>
+
+	<p>
+		<i>Newton's Method</i> </br>
+		<div class="VIDEO">
+		<iframe class="vid" src="https://www.youtube.com/embed/noZmHc6zb8c"></iframe>
+		</div>
+	</p>
+
+	<p>
+		These two methods are two starting points for two techniques in root-finding. Bisection method uses the region of inputs to shrink down to a neighborhood around the root. Newton’s method uses tangent lines and calculus to find the root. There are other methods, with much more complexity and accuracy than these. You can breeze through some of them in the root-finding algorithms Wikipedia page.
+	</p>
+
+	<h2> Reaping What was Sown </h2>
+	<p></br>
+		Let’s go back to why. Why do we care about zeros of a function?
+	</p>
+
+	<p>
+		As an easy example, suppose the money in our bank account is represented by the function <i>M(t)</i> where <i>t</i> is the input of time. Knowing when our bank account will become zero would help us plan for the future.
+	</p>
+
+	<p>
+		For those who’ve had Calculus or in Calculus right now, you’ll know that whenever the derivative of a function is zero, then we could be at a maximum or minimum of the original function.
+	</p>
+
+	<p>
+		As a silly calculus-driven example, suppose you’re selling t-shirts at an event and based on research, you know that your profit follows the function <i>P(s)</i> where <i>s</i> is the input of how many shirts you sell. You know that if you sell too much, you’re going to sour the crowd and lose out on money. So, how do you know when you should stop selling t-shirts to maximize profits? With the help of derivatives, you can find where the roots of the derivatives are and find out where maximum profit could occur.
+	</p>
+
+	<p>
+		The existence and relevance of zero is a key development in mathematics, because turns out “nothing” is actually important!
+	</p>
+
+	<p>
+		Another important aspect of roots is factorization, but I think I’ll only tease that topic here. To give myself something to talk about in the future, haha.
+	</p>
+
+	<h2> The Next Harvest </h2>
+	<p></br>
+		We have barely scratched the surface! We’ve only been dealing in the two-dimensional world. Imagine what kind of applications we could have if we’re allowed in higher dimensions. Finding roots for a higher dimension is like asking where the peak of the mountain is!
+	</p>
+
+	<p>
+		For a relatively simple example, suppose you’re selling two different things. Your profit is a function that depends on two inputs, the amount of <i>x</i> items you sell and the amount of <i>y</i> items you sell. If you want the maximum of this function, you’re going to need to know where the roots of its derivative are. The roots of the derivative could be where the peaks of this mountain are.
+	</p>
+
+	<p>
+		Thank you for reading this essay. I hope you’ve found a new appreciation to why we like zeros and roots.
+	</p>
+
+	<p>
+		<img src="http://drive.google.com/uc?id=1M__eWrl7PAls-nWHyoJa3LpTg1zTOQxl" alt = "cooking_doodle" class = "image">
+	</p>
+	
+
+<h1></h1></br>
+
+<p>
+	<i>
+		Uploaded 2022 January 15. This is a part of a monthly project which you can read about 
+		<a href = "/johanc/writings" target = "_self"><font color ="red"> here.</font></a>
+	</i>
+</p>
+
+<h1></h1></br>
+
+</font> 
+</body>
+</html>

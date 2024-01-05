@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> June - Interpolation </title>
+	<script type="text/javascript"
+		src="https://www.maths.nottingham.ac.uk/plp/pmadw/LaTeXMathML.js">
+	</script>
+	<link rel="stylesheet" href="css/common.css" type="text/css" />
+	<link rel="stylesheet" href="css/responsive.css" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet"/>
+	<link rel="icon" type="image/png" href="/johanc/img/Favicon.png" />
+</head>
+
+<style = "css">
+	body {
+		max-width: 65%;
+		margin: auto;
+		background-color: rgb(255, 255, 255);
+		font-family: 'Roboto', sans-serif;
+	}
+	h1 {
+		padding-top: 0.5em;
+		max-width: 100%;
+		margin: auto;
+	}
+	h2 {
+		max-width: 100%;
+		margin: auto;
+		font-size: 20px;
+		padding-top:1em;
+	}
+	p {
+		max-width: 100%;
+		margin: auto;
+		line-height: 1.5em;
+		font-family: 'Roboto', sans-serif;
+		text-align: left;
+		font-size: 15px;
+		padding-bottom: 10px;
+	}
+	img {
+		max-width: 100%;
+		display: block;
+		margin-left:auto;
+		margin-right: auto;
+	}
+	a { text-decoration: none; font-style: bold; }
+	a:link { color: red; }
+	a:visited { color: black; }
+	a:hover { color: #d00000; }
+	a:active { color: red; }
+	hr { opacity: 1.0; max-width: 85%;}
+	ol,ul {
+		max-width: 100%;
+		margin: auto;
+		font-size: 15px;
+	}
+	div.anect{
+		padding-top: 1em;
+		padding-bottom: 1em;
+		font-size: 15px;
+		padding-left: 2em;
+	}
+	div.note {
+		max-width: 100%;
+		line-height: 1.5em;
+		text-align: right;
+		font-size: 14px;
+		position: fixed;
+     	padding: 5px;
+     	bottom: 5px;
+     	right: 5px;
+     	background-color: gray;
+     	border: 1px solid #ffffff;
+     	color: #E6E6E6;
+	}
+
+	/* Video Stuff*/
+	div.VIDEO {
+		margin: 5px;
+		border: 1px solid #ccc;
+		width: 100%;
+	}
+	div.DESC {
+		padding: 15px;
+		text-align: center;
+	}
+	iframe.vid {width: 100%; height: 300px;}
+</style>
+
+<body link = "white">
+	<font color = "black">	
+	<!-- Actual Body -->
+
+	</br>
+	<h1>
+		June - Interpolation
+	</h1>
+	</br>
+
+	<p>
+		<img src="http://drive.google.com/uc?id=1SKMwWuVEKNgfK2IoTHH4QQolt07QEZhT" alt = "interpolate1" class = "image">
+	</p>
+
+	<p></br>
+		In the previous Monthly Math-y about <a href=”https://johanmcs.github.io/johanc/writings/roots” target=”_blank”>finding roots</a>, I talked about how to start with a (complicated) function and finding its horizontal intercepts by using numerical methods. I thought a good pairing for that is to discuss the reverse! In other words, building a function that passes through any number of points you desire. Passing through points is what we call ✨ Interpolation ✨.
+	</p>
+
+	<p>
+		What is so cool about this is that you're not relegated to just horizontal intercepts! You'll be able to pass through any collection of points you want, as long as you abide by one rule. You cannot repeat the same input! The main reason for this restriction is you never want to confuse the function on what it’s supposed to return as an output.
+	</p>
+
+	<p>
+		For example, suppose you have $(2,4)$ and $(2,5)$ where the first number in the parenthesis is the input and the second number is the output. Here we repeated the input “$2$”. When we ask for an output, we don’t know if we want $4$ or $5$ back!
+	</p>
+	
+	<p>
+		This type of restriction is everywhere in the real world. Imagine if you sent a text message (the input) and the person receiving the message (the output) had two possibilities: your actual intended message or some jumbled mess of words. So, we want our data to be clear and non-confusing.
+	</p>
+		
+	<h2> Lagrange Polynomial </h2>
+
+	<p></br>
+		Let’s start! Suppose we have the data: 
+		<div class="anect">$(x_0,y_0)=(1,2)$, $(x_1,y_1)=(2,0)$, and $(x_2,y_2)=(3,2)$.</div>
+	</p>
+	
+	<p>
+		We have three points that we want our function to pass through. We start labeling with $x_0$ and $y_0$ because of convention. According to <a href=”https://en.wikipedia.org/wiki/Lagrange_polynomial” target=”_blank”>Wikipedia</a>, the Lagrange Polynomial is the unique polynomial of lowest degree that interpolates a given set of data.
+	</p>
+
+	<p>
+		A polynomial is one of the simplest forms a function can be. You probably recognize $y = mx + b$ or maybe $y = ax^2 + bx + c$ which are both polynomials! Polynomials are functions where the only operations allowed are addition, subtraction, multiplication, and exponents with positive whole numbers! No divisions allowed, no negative exponents. You don’t really need to know that it’s unique, but it is cool that it is unique. 
+	</p>
+	<p>
+		Degree refers to the largest exponent the variable of the polynomial has. So, “lowest degree” here means we don’t have to go up to a higher exponent to pass through all the points.
+	</p>
+	<p>
+		Heads up, I’m about to throw a huge math formula at you. The Lagrange Polynomial for the data $\{(x_0,y_0),(x_1,y_1),(x_2,y_2)\}$
+		<div class="anect">$L(x)=y_0f_0(x)+y_1f_1(x)+y_2f_2(x)$</div>
+		where each of those $f_0$, $f_1$, and $f_2$ are
+		<div class="anect">$f_0(x)=\frac{(x-x_1)}{(x_0-x_1)}\cdot\frac{(x-x_2)}{(x_0-x_2)}$</div>
+		<div class="anect">$f_1(x)=\frac{(x-x_0)}{(x_1-x_0)}\cdot\frac{(x-x_2)}{(x_1-x_2)}$ and</div>
+		<div class="anect">$f_2(x)=\frac{(x-x_0)}{(x_2-x_0)}\cdot\frac{(x-x_1)}{(x_2-x_1)}~$.</div>
+		
+		At the end of the day, I'm not really interested in talking to you about the actual dirty formulas. I included it here for the people who wanted to see it. Here's a video I found that runs through an example of this process by hand: <a href="https://www.youtube.com/watch?v=vAgKE5wvR4Y" target="_blank">YouTube link</a>, be warned though, they do a big example.
+	</p>
+
+	<p>
+		What I want to highlight about this is a few things. One, the polynomial we get will always have degree one less than the number of data points we have. For example, here we have three data points, and so our polynomial (after all the multiplying and simplifying) will look like $y = ax^2 + bx + c$. For completion of this example, the answer you would get is $2x^2-8x+8$ and looks like: </br> </br>
+
+		<img src="http://drive.google.com/uc?id=1cryhDd96A7nSd6TmYjdH44cvOKZRhVrY" alt = "interpolate_example" class = "image"></br>
+	</p>
+	<p>
+		Two, this is a guaranteed process. As long your data abides by the one rule above, you will always find the Lagrange polynomial that can pass through those points. But there's a severe weakenss to this... We'll see it in the next section.
+	</p>
+	<p>
+		Three, this process is involved. There's a lot going on in terms of computing, so you can imagine what happens when there's 10 or 100 data points. If you had all the time and computing power, you could definitely find a lot of Lagrange Polynomials for what data set you have. There's also the limit that this only works for two-dimensional data! You can only have $(x,y)$'s. (There's actually higher dimensional versions, but that's outside my pay grade.)
+	</p>
+	<p>
+		That brings up a good question (and segue to the next topic), what do we do if don't have the strongest computer to do 10 or 100 data points just to find one polynomial?
+	</p>
+
+	<h2> Line of Best Fit </h2>
+
+	<p></br>
+		Why exactly are we making polynomials that passes through points? (Besides that it's cool we can do this.) We want to estimate! We have a data set and what we really want is to know what happens outside of that data, maybe to guess what will happen in the future. So, the weakness I alluded to above can be seen in the following sketch: </br> </br>
+
+		<img src="http://drive.google.com/uc?id=12TTUCnW8bOPPl6UeRuekJxp_CO0BgG2t" alt = "interpolate_bad_example" class = "image"> </br>
+	</p>
+	<p>
+		What happens when we want to estimate what happens at input 6? Well, we've fallen into the negatives! But, by inspection, the data seems to float around the height of 2. The issue here is that the Lagrange polynomial is too exact with its data, but outside of that data, we're probably not doing a great job at finding the "trend" or "pattern".
+	</p>
+	<p>
+		For this example, the "line of best fit" is probably the horizontal line at height 2. Sure, it messes up the other values, but at least it has the correct trend. The line of best fit also has the fancy name of "linear regression" which you can watch a <a href="https://www.youtube.com/watch?v=P8hT5nDai6A" target="_blank">video demonstrating it</a>, but this is already outside what I wanted for this Monthly Math-y. The idea is that we're finding a line (or curve) that has the "least square error" which is another fancy thing that I might talk about in a future Monthly Math-y.
+	</p>
+
+	<h2>The Motivation and Dichotomy</h2>
+	<p></br>
+		So, why did I bring up this topic? (Besides that it's cool.) I wanted to highlight this weird thing about mathematics and our needs in the real-world, what appears to be a dichotomy (<i>a division or contrast between two things that are or are represented as being opposed or entirely different.</i>) On one hand, you have a mathematically sound process that will do exactly what you want it to do (give you a polynomial that passes through a set of data points). On the other hand, the real world needs things that we can do efficiently, even if it means there will be an error.
+	</p>
+
+	<p>
+		What I want to argue is that these two avenues aren't so opposing. There are probably other parts of mathematics where this sort of dichotomy exists between pure curiousity and applied needs. It most certainly is a dichotomy that some mathematicians find themselves believing can never be remedied. As someone who has been on both camps, it really does not seem all that different. At the end of the day, what I believe to be mathematics is understanding our world and what we, humans, can do with our creations/discoveries. I think people on both sides ought to appreciate that the other camp exists to do the thing that you may not want to do. The proof of the Lagrange polynomial being unique, or that it even exists, can be tiresome, but someone who loved the venture of mathematics found it fulfilling to do. Now we have it. Similarly, the discovery of the least squares error line of best fit is something that took years to find and implement for computers. But now we have it.
+	</p>
+
+<h1></h1></br>
+
+<p>
+	<i>
+		Uploaded 2023 August 1. (This was added to the ordering afterwards to complete a year-long collection.) This is a part of a monthly project which you can read about 
+		<a href = "/johanc/writings" target = "_self"><font color ="red"> here.</font></a>
+	</i>
+</p>
+
+<h1></h1></br>
+
+</font> 
+</body>
+</html>

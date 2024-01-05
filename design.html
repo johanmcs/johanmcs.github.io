@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> Portfolio </title>
+	<link rel="stylesheet" href="css/common.css" type="text/css" />
+	<link rel="stylesheet" href="css/responsive.css" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet"/>
+	<link rel="icon" type="image/png" href="img/Favicon.png" />
+</head>
+
+<style = "css">
+	body {
+		background-repeat: no-repeat;
+		background-color: #ffffff;
+		font-family: 'Roboto', sans-serif;
+		max-width: 100%;
+		margin: auto;
+	}
+	h1 {
+		max-width: 100%;
+		margin: auto;
+		line-height: 1em;
+		text-align: left;
+		font-size: 25px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+	p {
+		max-width: 80%;
+		margin: auto;
+		text-align: left;
+		font-size: 1em;
+	}
+	div.title {
+		clear: both;
+		max-width: 80%;
+		margin: auto;
+		line-height: 0.9em;
+		text-align: left;
+		font-family: 'Roboto Thin', sans-serif;
+		vertical-align: middle;
+		font-size: 40px;
+		color: #992b2b;
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+	div.gall {
+		max-width: 80%;
+		margin: auto;
+		line-height: 1.5em;
+		text-align: left;
+	}
+	div.gall img {
+		display: inline-block;		
+		width: 30%;
+		margin-right: 0.2em;
+	}
+	iframe {
+    	border: none;
+	}
+	div.vertpic {
+		max-width: relative;
+		text-align: left;
+	}
+	div.vertpic img {	
+		width: relative;
+	}
+	img {
+		box-shadow: 0px 0px 1px #000000;
+	}
+	a { text-decoration: none; font-style: bold; }
+	a:link { color: blue; }
+	a:visited { color: blue; }
+	a:hover { color: pink; }
+	a:active { color: blue; }
+	hr { opacity: 1.0; max-width: 85%;}
+	/* Menu Stuff */
+	ul.special {
+	  list-style-type: none;
+	  margin: 0;
+	  padding: 0;
+	  overflow: hidden;
+	  background-color: #d1d1d1;
+	}
+	li.special {  border-right: 1px solid #E6E6E6; float: left; }
+	li.special a {
+	  display: block;
+	  color: black;
+	  text-align: center;
+	  padding: 10px 12px;
+	  text-decoration: none;
+	}
+	li.special a:hover:not(.active) {  background-color: #F07B7B;}
+	.active {  background-color: #e75c5c;}
+
+	/* Video Stuff*/
+	div.VIDEO {
+		margin: 5px;
+		border: 1px solid #ccc;
+		float: left;
+		width: 480px;
+	}
+	div.VIDEO img {
+		width: 100%;
+		height: auto;
+	}
+	div.DESC {
+		padding: 15px;
+		text-align: center;
+	}
+
+	div.note {
+		max-width: 100%;
+		line-height: 1.5em;
+		text-align: right;
+		font-size: 14px;
+		position: fixed;
+     	padding: 5px;
+     	bottom: 5px;
+     	right: 5px;
+     	background-color: gray;
+     	border: 1px solid #ffffff;
+     	color: #E6E6E6;
+	}
+	div.PAD {
+		padding-bottom:5em;
+	}
+
+</style>
+
+<body link = "red">
+	<font color = "black">
+
+	<!-- Menu -->
+	<ul class="special">
+	  <li class="special"><a href = "/index" target = "_self">🏠</a></li>
+	  <li class="special"><a href = "/about" target = "_self">BIO</a></li>
+	  <li class="special"><a href = "/teaching" target = "_self">TEACHING</a></li>
+	  <li class="special"><a href = "/writings" target = "_self">RESEARCH & WRITINGS</a></li>
+	  <li class="special"><a class = "active" target = "_self">PORTFOLIO</a></li>
+	  <!--<li class="special"><a href = "/johanc/simple" target = "_self">SIMPLE</a></li>
+	  <li class="special"><a href = "/johanc/pandesal" target = "_self">PANDESAL</a></li>-->
+	</ul>
+
+	</br>
+	<div class="note">contact: jcristobal2[at]huskers[dot]unl[dot]edu</div>
+	<!-- Actual Body -->
+
+	<p>Did you want to see <a href = "/design.html#video" target = "_self">Video?</a> or <a href = "/design.html#design" target = "_self">Design?</a></p>
+
+	<a name="video"> <div class = "title"> VIDEO PORTFOLIO </div> </a>
+	
+	<div class="gall">
+		<div class="VIDEO">
+			<iframe width="480" height="270" src="https://app.vidgrid.com/embed/R3LP7gHidZjD"> </iframe>
+			<div class="DESC">An example of the videos I made for the <u><a href = "https://mathbooks.unl.edu/PreCalculus/part-1.html" target="_self">Open Educational Resource for UNL's Intermediate Algebra Course</a></u>.</div>
+		</div>
+
+		<div class="VIDEO">
+			<iframe width="480" height="270" src="https://www.youtube.com/embed/9XYLCEyZOKE"> </iframe>
+			<div class="DESC">Addressing a common question from prospective graduate students.</div>
+		</div>
+
+		<div class="VIDEO">
+			<iframe width="480" height="270" src="https://www.youtube.com/embed/gzELnyJzPCs"> </iframe>
+			<div class="DESC">Discussing my projected timeline for my Mathematics PhD (as a second-year).</div>
+		</div>
+		
+		<div class="VIDEO">
+			<iframe width="480" height="270" src="https://www.youtube.com/embed/jUTKe4C0tFQ"> </iframe>
+			<div class="DESC">Celebrating my graduation at UCLA, my way of commemorating this event.</div>
+		</div>
+
+		<div class="VIDEO">
+			<iframe width="480" height="270" src="https://www.youtube.com/embed/RpWYanV16gk"> </iframe>
+			<div class="DESC"> Discussing what I learned throughout the graduate application process. </div>
+		</div>
+
+		<div class="VIDEO">
+			<iframe width="480" height="270" src="https://www.youtube.com/embed/wdn42A_kJl0"> </iframe>
+			<div class="DESC"> My trip to Missouri to attend Math Alliance's Field of Dreams conference. </div>
+		</div>
+	</div>
+
+	<a name="design"> <div class = "title"> DESIGN PORTFOLIO </div> </a>
+
+	<div class = "gall">
+		<h1>Real-life Art</h1>
+		<img src="img/red-painting.jpg" alt = "red" class = "image">
+		<img src="img/yellow-painting.jpg" alt = "yellow" class = "image">
+		<img src="img/blue-painting.jpg" alt = "blue" class = "image">
+	</div>
+
+	<div class = "gall">
+		<h1>Favorite Digital Art</h1>
+		<img src="http://drive.google.com/uc?id=11ZO0rEsrPNyXdX4J1gTVp8W2hYTPSctq" alt = "Star" class = "image">
+		<img src="http://drive.google.com/uc?id=1qqNS0b_0cJ-ikKP4iLhqGUslxGc-ounZ" alt = "21st" class = "image">
+		<img src="http://drive.google.com/uc?id=1r-K7AtQq3pN1WapcMxmmIt-GsBMKyY0F" alt = "BRUINASL" class = "image">
+		<img src="http://drive.google.com/uc?id=1rkitTwl-93EUoxbf2Xpcf3IajiMtplAC" alt = "20th" class = "image">
+		<img src="http://drive.google.com/uc?id=15YLEXtJjLqdl2OFGREMe5qA3GCPlezoB" alt = "Shirt2017" class = "image">
+		<img src="http://drive.google.com/uc?id=1qsR8m56Ep_3pYvzlf3gfou94J9zhBR-L" alt = "Shirt2018" class = "image">
+	</div>
+
+	<div class="gall">
+		<div class = "vertpic">
+			<!--<img src="http://drive.google.com/uc?id=1HlDqGWHWriP6OMP5s3FTQC76Pstee7ao" alt = "September1" class = "image">
+			<img src="http://drive.google.com/uc?id=1RgtedUU6uGFoY25fAmSjJKG6aXKDcRmE" alt = "September2" class = "image">-->
+
+			<img src="http://drive.google.com/uc?id=1_WQWNyPZUs57kqeXyaFW8IFabKT2hHhi" alt = "October1" class = "image">
+			<!--<img src="http://drive.google.com/uc?id=1g40_GO2ID22q1XBe3dYtGl4aHa5sy4Ya" alt = "October2" class = "image">
+
+			<img src="http://drive.google.com/uc?id=1TKfXh8ZsLiXBNnqbhMHgElmYI6NDrNB9" alt = "November1" class = "image">
+			<img src="http://drive.google.com/uc?id=1fIOBHK_jL87tGy0m-B0UHzPDVPaDUn1u" alt = "November2" class = "image"> -->
+
+			<img src="http://drive.google.com/uc?id=1zIJIXUxCNePI_XhKh_SXEkcN8bQz3XUz" alt = "December1" class = "image">
+			<!--<img src="http://drive.google.com/uc?id=11PEItZPK0aG63Rmy-gLP0qjLR0ghjROe" alt = "December2" class = "image">-->
+
+			<!--<img src="http://drive.google.com/uc?id=1xCbPt_7tDpfaTaRWIalK93CjufNU37Nn" alt = "January1" class = "image">
+			<img src="http://drive.google.com/uc?id=1_moor9JVqGgs8hC_YzlcTvSCCQqR1xNh" alt = "January2" class = "image"> -->
+
+			<img src="http://drive.google.com/uc?id=14_GXXjaziZPQ-7qcFYxHpvZNtj5eSk4U" alt = "February1" class = "image">
+			<!--<img src="http://drive.google.com/uc?id=1_0K_Nk_KeFy6O6PM5na-249m1k52syP0" alt = "February2" class = "image">-->
+
+			<!--<img src="http://drive.google.com/uc?id=1dBuOiadV7ZlkudLNzNCbJ9NXcn3xGAt2" alt = "March1" class = "image">
+			<img src="http://drive.google.com/uc?id=1H2ytdv4Wz-DOC9dfI6AxA9o-VNcofRBr" alt = "March2" class = "image"> -->
+
+			<img src="http://drive.google.com/uc?id=1GMnOGz825rjAD-AYOaSxrFgLTlO5XeMe" alt = "April1" class = "image">
+			<!--<img src="http://drive.google.com/uc?id=1Loag3bzQa546QyeBPedZaVvlAynqWA_s" alt = "April2" class = "image">-->
+
+			<img src="http://drive.google.com/uc?id=1pMEmR54eKxPPRnziwldApX9u_IFpCGZY" alt = "May1" class = "image">
+			<img src="http://drive.google.com/uc?id=1OzyiRMhiyFlH4Ieij0yc32W7ua3CF8Xc" alt = "May2" class = "image">
+
+			<!--<img src="http://drive.google.com/uc?id=1nsrAOFf8TpwKTVkCYOiwGCcKZlvRUae5" alt = "June1" class = "image">
+			<img src="http://drive.google.com/uc?id=1RO5xpXQaex6WryKqt3QSH2QJ53jiotzM" alt = "June2" class = "image">-->
+
+			<!--<img src="http://drive.google.com/uc?id=1iO1uQ2QT01jA_kk9UKkt0aobMPBPsw8J" alt = "July1" class = "image">
+			<img src="http://drive.google.com/uc?id=1LNoe3JFmwEUK7UDCWi4pYEhGK14oh7JV" alt = "July2" class = "image">
+
+			<img src="http://drive.google.com/uc?id=1-f80Jdgqym7zZwUlnVytgSEgNGW9vaW9" alt = "August1" class = "image">
+			<img src="http://drive.google.com/uc?id=1YGPb5EY5BwFsSEPJYJ1dJZRJhPlzoW8K" alt = "August2" class = "image"> -->
+		</div>
+	</div>
+
+	<div class="PAD"></div>
+</font> 
+</body>
+</html>
