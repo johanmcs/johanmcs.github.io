@@ -128,6 +128,85 @@
 	div.PAD {
 		padding-bottom:20em;
 	}
+
+	div.downnote {		
+		line-height: 2em;
+		font-size: 9px;
+		padding:10px;
+		line-height: 1.5em;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: max-content;
+		color: white;
+		text-align: center;
+		-webkit-transform: translate(-50%, 0%) rotate(0deg);
+	-moz-transform: translate(-50%, 0%) rotate(0deg);
+	transform: translate(-50%, 0%) rotate(0deg);
+	-webkit-animation: fade_move_down2 4s ease-in-out infinite;
+	-moz-animation:    fade_move_down2 4s ease-in-out infinite;
+	animation:         fade_move_down2 4s ease-in-out infinite;
+	}
+
+
+	/*animated scroll arrow animation*/
+	@-webkit-keyframes fade_move_down2 {
+	0%   { -webkit-transform:translate(0,-10px) rotate(0deg); opacity: 0;  }
+	50%  { opacity: 1;  }
+	100% { -webkit-transform:translate(0,10px) rotate(0deg); opacity: 0; }
+	}
+	@-moz-keyframes fade_move_down2 {
+	0%   { -moz-transform:translate(0,-10px) rotate(0deg); opacity: 0;  }
+	50%  { opacity: 1;  }
+	100% { -moz-transform:translate(0,10px) rotate(0deg); opacity: 0; }
+	}
+	@keyframes fade_move_down2 {
+	0%   { transform:translate(0,-10px) rotate(0deg); opacity: 0;  }
+	50%  { opacity: 1;  }
+	100% { transform:translate(0,10px) rotate(0deg); opacity: 0; }
+	}
+ 
+	/* Taken from https://unused-css.com/blog/animated-down-arrow/ */
+	.scroll-down {
+	position: relative;
+	left: 50%;
+	bottom: 10px;
+	display: block;
+	text-align: center;
+	font-size: 10px;
+	z-index: 100;
+	text-decoration: none;
+	text-shadow: 0;
+	width: 13px;
+	height: 13px;
+	border-bottom: 2px solid #fff;
+	border-right: 2px solid #fff;
+	z-index: 9;
+	left: 50%;
+	-webkit-transform: translate(-50%, 0%) rotate(45deg);
+	-moz-transform: translate(-50%, 0%) rotate(45deg);
+	transform: translate(-50%, 0%) rotate(45deg);
+	-webkit-animation: fade_move_down 4s ease-in-out infinite;
+	-moz-animation:    fade_move_down 4s ease-in-out infinite;
+	animation:         fade_move_down 4s ease-in-out infinite;
+	}
+
+
+	/*animated scroll arrow animation*/
+	@-webkit-keyframes fade_move_down {
+	0%   { -webkit-transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+	50%  { opacity: 1;  }
+	100% { -webkit-transform:translate(0,10px) rotate(45deg); opacity: 0; }
+	}
+	@-moz-keyframes fade_move_down {
+	0%   { -moz-transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+	50%  { opacity: 1;  }
+	100% { -moz-transform:translate(0,10px) rotate(45deg); opacity: 0; }
+	}
+	@keyframes fade_move_down {
+	0%   { transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+	50%  { opacity: 1;  }
+	100% { transform:translate(0,10px) rotate(45deg); opacity: 0; }
+	}
 </style>
 
 <body link = "black">
@@ -147,20 +226,17 @@
 
 	<div class="righty"><p><img width="200" height="200" src="http://drive.google.com/uc?id=1qcUeme0--wj6LbvtvmN4txarkboo5ZDd" alt = "Selfie" class = "image"> </br>Hello! It's me, Johan!</p></div>
 
-	<div class = "righty"><p>Johan made this website! </br> 🧑🏽‍💻 Updated December 2, 2023.</p></div>
+	<div class = "righty"><p>Johan made this website! </br> 🧑🏽‍💻 Updated January 8, 2024.</p></div>
 
 	<div class = "lefty">
 		<p>
-			Contact Email: jcristobal2[at]huskers[dot]unl[dot]edu</br>
+			Contact Email: jcristobal2[at]unl[dot]edu</br>
 			Emailing me is the best way to contact me.
 		</p>
 	</div>
 
-	<div class = "righty">
-		<p>
-			The photo in the background was </br> taken January 17, 2023 at the </br> Museum of Modern Art in Tokyo.
-		</p>
-	</div>
+	<div class="downnote">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Scroll Down<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for more</div>
+	<div class="scroll-down"></div>
 
 	<div class="PAD"></div>
 
@@ -178,7 +254,7 @@
 
 	<div class = "rightybody">
 		<p>
-			For my dissertation, I focus on Math Education. In particular, I am researching the transition of mathematics graduate students into instructors of record. The goal is to extract information from lived experiences to further improve the professional development and orientation we provide to future Graduate Student Instructors.
+			For my dissertation, I focus on Math Education. In particular, I am trying to understand more about frames of teaching and learning at the undergraduate mathematics level of instruction, and how local and national culture and histories of mathematics learning influences our ways of teaching mathematics. Most (in)formative to my research are the critical epistemologies and culturally relevant/sustaining pedagogies.
 
 		</p>
 	</div>
@@ -204,6 +280,13 @@
 			On top of teaching, I've also aided in course development. I worked tremendously hard on the College Algebra Co-requisite Course, in which I reordered the sections for a better scaffolding and I made videos to be embedded in the online free textbook. You can see an example of this in the PORTOFOLIO tab, or check out the <a href = "https://mathbooks.unl.edu/PreCalculus/part-1.html" target="_self">Open Educational Resource for UNL's Intermediate Algebra Course</a>.
 		</p>
 	</div>
+
+	<div class = "righty">
+		<p>
+			The photo in the background was </br> taken January 17, 2023 at the </br> Museum of Modern Art in Tokyo.
+		</p>
+	</div>
+
 </div>
 </font>
 </body>
