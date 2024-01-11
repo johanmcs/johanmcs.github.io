@@ -101,7 +101,7 @@
 	</br>
 
 	<p>
-		<img src="http://drive.google.com/uc?id=1SKMwWuVEKNgfK2IoTHH4QQolt07QEZhT" alt = "interpolate1" class = "image">
+		<img src="/img/interpolate1.png" alt = "interpolate1" class = "image">
 	</p>
 
 	<p></br>
@@ -151,7 +151,7 @@
 	<p>
 		What I want to highlight about this is a few things. One, the polynomial we get will always have degree one less than the number of data points we have. For example, here we have three data points, and so our polynomial (after all the multiplying and simplifying) will look like $y = ax^2 + bx + c$. For completion of this example, the answer you would get is $2x^2-8x+8$ and looks like: </br> </br>
 
-		<img src="http://drive.google.com/uc?id=1cryhDd96A7nSd6TmYjdH44cvOKZRhVrY" alt = "interpolate_example" class = "image"></br>
+		<img src="/img/interpolate_example.png" alt = "interpolate_example" class = "image"></br>
 	</p>
 	<p>
 		Two, this is a guaranteed process. As long your data abides by the one rule above, you will always find the Lagrange polynomial that can pass through those points. But there's a severe weakenss to this... We'll see it in the next section.
@@ -168,7 +168,7 @@
 	<p></br>
 		Why exactly are we making polynomials that passes through points? (Besides that it's cool we can do this.) We want to estimate! We have a data set and what we really want is to know what happens outside of that data, maybe to guess what will happen in the future. So, the weakness I alluded to above can be seen in the following sketch: </br> </br>
 
-		<img src="http://drive.google.com/uc?id=12TTUCnW8bOPPl6UeRuekJxp_CO0BgG2t" alt = "interpolate_bad_example" class = "image"> </br>
+		<img src="/img/interpolate_bad_example.png" alt = "interpolate_bad_example" class = "image"> </br>
 	</p>
 	<p>
 		What happens when we want to estimate what happens at input 6? Well, we've fallen into the negatives! But, by inspection, the data seems to float around the height of 2. The issue here is that the Lagrange polynomial is too exact with its data, but outside of that data, we're probably not doing a great job at finding the "trend" or "pattern".
