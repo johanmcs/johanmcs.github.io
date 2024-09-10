@@ -15,18 +15,12 @@
 		height:100%;
 	}
 	body {
-		max-width: 100%;
+		max-width: 98%;
 		margin: auto;
 		font-family: 'Roboto', sans-serif;
-		/*background-image: linear-gradient(rgba(119, 119, 119, 0.3), rgba(221, 221, 221, 0.3)),
-		url("../img/blue-painting.jpg"); */
-		background-position:10% 55%;
-		background-size: cover;
-		background-attachment: fixed;
 	}
 	h1 {
 		max-width: 100%;
-		padding-left: 0.5em;
 		margin: auto;
 		text-align: center;
 	}
@@ -37,15 +31,12 @@
 		text-align: left;
 	}
 	div.headerTitle {
-		margin-left: 2%;
-		margin-right: 2%;
 		margin-top: 1em;
 		margin-bottom: 1em;
-		max-width: 90%;
+		max-width: 100%;
 		text-align: left;	
 		background-color: #deb6a9;	
 		box-shadow: 1px 1px 1px rgb(159, 159, 159);
-		padding-right: 2em;
 		padding-top: 20px;
 		padding-bottom: 20px;
 	}
@@ -54,11 +45,11 @@
 		margin-right: 2%;
 		margin-top: 1em;
 		margin-bottom:1em;
-		max-width: 90%;
+		max-width: 100%;
 		text-align: left;		
 		background-color: #fff0eb;	
 		box-shadow: 1px 1px 1px rgb(159, 159, 159);
-		padding-right: 2em ;
+		padding-right: 1em ;
 		padding-top: 20px;
 		padding-bottom: 20px;
 	}
@@ -105,31 +96,39 @@
 		padding-left: 4em;
 	}
 
-	.column {
-		float: left;
-		width: 50%;
-	}
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33%;
+}
 
-	/* Clear floats after the columns */
-	.row:after {
-		content: "";
-		display: table;
-		clear: both;
-	}
+/* Clear floats */
+.row:after {
+  content: "";
+  display: table;
+   clear: both;
+}
 
-	/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-	@media screen and (max-width: 600px) {
-		.column {
-			width: 100%;
-		}
-	}
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
 
 </style>
 
 <body link = "white">
 	<font color = "black">
 
-	<div class="note">contact: insert email here</div>
+	<!--<div class="note">contact: insert email here</div> -->
 
 	<!-- Actual Body -->
 
@@ -140,23 +139,15 @@
 	<div class="row">
 		<div class="column">
 			<div class="block">
-				<h2> About </h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dolor felis, facilisis id felis non, condimentum lobortis quam. Suspendisse potenti. Pellentesque vestibulum commodo mauris quis ullamcorper. Integer at lacinia turpis. Cras ultrices quam et nisl porttitor euismod. Integer lobortis tellus non sodales pellentesque. Cras vitae neque felis. Nam blandit ipsum lorem, ut vestibulum ligula faucibus vitae. Quisque malesuada venenatis ligula, vel eleifend nulla euismod non. Vivamus porttitor tellus eget velit tincidunt cursus.
+				<h2> Rationale </h2>
+				<p>Recently, there has been significant interest in graduate mathematics education from both practitioners and researchers. Despite this significant interest from various stakeholders in the mathematical sciences, there have been few formal research venues (or “homes”) for this work to occur in a sustained fashion. We envision this working group as filling this gap and providing space for stakeholders—researchers, leaders in graduate education, graduate mathematics faculty, and <i>graduate students</i>—to convene and work collaboratively on research-based solutions to improving graduate mathematics education. 
+				</p>
+				<p>
+					To be clear, we use “graduate mathematics education” as an umbrella term to refer to graduate education in the mathematical sciences. Our definition of “graduate student” is also purposefully broad and includes mathematics education graduate students. 
+					
 				</p>
 			</div> 
-		</div>
 
-		<div class="column">
-			<div class="block">
-				<h2> News </h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dolor felis, facilisis id felis non, condimentum lobortis quam. Suspendisse potenti. Pellentesque vestibulum commodo mauris quis ullamcorper. Integer at lacinia turpis. Cras ultrices quam et nisl porttitor euismod. Integer lobortis tellus non sodales pellentesque. Cras vitae neque felis. Nam blandit ipsum lorem, ut vestibulum ligula faucibus vitae. Quisque malesuada venenatis ligula, vel eleifend nulla euismod non. Vivamus porttitor tellus eget velit tincidunt cursus.
-				</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dolor felis, facilisis id felis non, condimentum lobortis quam. Suspendisse potenti. Pellentesque vestibulum commodo mauris quis ullamcorper. Integer at lacinia turpis. Cras ultrices quam et nisl porttitor euismod. Integer lobortis tellus non sodales pellentesque. Cras vitae neque felis. Nam blandit ipsum lorem, ut vestibulum ligula faucibus vitae. Quisque malesuada venenatis ligula, vel eleifend nulla euismod non. Vivamus porttitor tellus eget velit tincidunt cursus.
-				</p>
-			</div> 
-		</div>
-
-		<div class="column">
 			<div class="block">
 				<h2> Seminar Schedule </h2>
 				<p>Hi!</p>
@@ -165,11 +156,28 @@
 
 		<div class="column">
 			<div class="block">
-				<h2> Links:</h2>
+				<h2> Links</h2>
 				<p><a href = "./previous_seminars.html" target = "_self">Previous Seminars</a></p>
 				<p><a href = "./WGRUME2024.html" target = "_self">Notes from the Working Group in the 2024 Conference on RUME</a></p>
 				<p><a href = "./resources_publishing.html" target = "_self">Resources for Publishing RGME-type work</a></p>
 				<p>etc...?</p>
+			</div> 
+
+			<div class="block">
+				<h2> News </h2>
+				<p>(Example) The RGME group will be holding a working group at the 2025 Conference on RUME, February 27 - March 1 in Alexandria, VA!
+				</p>
+			</div> 
+		</div>
+
+		<div class="column">
+			<div class="block">
+				<h2> Organizers</h2>
+				<ul>
+					<li></li>
+				</ul>
+
+				<p>Contact Email: </p>
 			</div> 
 		</div>
 	</div>
