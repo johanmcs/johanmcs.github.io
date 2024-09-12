@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="css/responsive.css" type="text/css" />
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet"/>
 	<link rel="icon" type="image/png" href="/img/RGME.png" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <style = "css">
@@ -15,175 +16,90 @@
 		height:100%;
 	}
 	body {
-		max-width: 98%;
+		max-width: 100%;
 		margin: auto;
 		font-family: 'Roboto', sans-serif;
 	}
 	h1 {
 		max-width: 100%;
 		margin: auto;
-		text-align: center;
-	}
-	h2 {
-		max-width: 100%;
-		padding-left: 0.5em;
-		margin: auto;
 		text-align: left;
+		padding-top:10%;
+		font-size: 65px;
+		text-shadow: 0px 7px 1px rgba(0, 0, 0, 0.2);
 	}
-	div.headerTitle {
-		margin-top: 1em;
-		margin-bottom: 1em;
-		max-width: 100%;
-		text-align: left;	
-		background-color: #deb6a9;	
-		box-shadow: 1px 1px 1px rgb(159, 159, 159);
-		padding-top: 20px;
-		padding-bottom: 20px;
-	}
-	div.block {
-		margin-left: 2%;
-		margin-right: 2%;
-		margin-top: 1em;
-		margin-bottom:1em;
-		max-width: 100%;
-		text-align: left;		
-		background-color: #fff0eb;	
-		box-shadow: 1px 1px 1px rgb(159, 159, 159);
-		padding-right: 1em ;
-		padding-top: 20px;
-		padding-bottom: 20px;
-	}
-	p {
-		line-height: 2em;
-		padding-left: 1em;
-		font-size: 15px;
-		line-height: 1em; 
 
-	}
-	g {
-		max-width: 30%;
-		float: left;
-		padding-right:15px;
-		padding-bottom:15px;
-	}
-	a { text-decoration: none; font-style: bold; }
-	a:link { color: rgb(0, 110, 255); }
-	a:visited { color: rgb(0, 110, 255); }
-	a:hover { color: rgb(0, 110, 255); }
-	a:active { color: rgb(0, 110, 255); }
-	hr { opacity: 1.0; max-width: 85%;}
-
-	div.note {
-		max-width: 100%;
-		line-height: 1.5em;
-		text-align: right;
-		font-size: 14px;
+	/* Menu Stuff */
+	.sidebar {
+		margin: 0;
+		padding: 0;
+		width: 200px;
+		background-color: #2b2b2b;
 		position: fixed;
-     	padding: 5px;
-     	bottom: 5px;
-     	right: 5px;
-     	background-color: gray;
-     	border: 1px solid #ffffff;
-     	color: #E6E6E6;
-	}
-	div.PAD {
-		padding-bottom:5em;
-	}
-	ol.normal,ul.normal {
-		max-width: 100%;
-		font-size: 14px;
-		line-height: 2.5em;
-		padding-left: 4em;
+		height: 100%;
+		overflow: auto;
 	}
 
-/* Create four equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 33%;
-}
+	.sidebar a {
+		display: block;
+		color: rgb(255, 255, 255);
+		padding: 16px;
+		text-decoration: none;
+	}
+	
+	.sidebar a.active {
+		background-color: #83442b;
+		color: white;
+	}
 
-/* Clear floats */
-.row:after {
-  content: "";
-  display: table;
-   clear: both;
-}
+	.sidebar a:hover:not(.active) {
+		background-color: #e9c9ae;
+		color: black;
+	}
 
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 900px) {
-  .column {
-    width: 50%;
-  }
-}
+	div.content {
+		margin-left: 200px;
+		padding: 1px 16px;
+		height: auto;
+	}
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
-}
+	@media screen and (max-width: 700px) {
+	.sidebar {
+		width: 100%;
+		height: auto;
+		position: relative;
+	}
+	.sidebar a {float: left;}
+	div.content {margin-left: 0;}
+	}
+
+	@media screen and (max-width: 400px) {
+	.sidebar a {
+		text-align: center;
+		float: none;
+	}
+	}
 
 </style>
 
-<body link = "white">
-	<font color = "black">
-
-	<!--<div class="note">contact: insert email here</div> -->
-
-	<!-- Actual Body -->
-
-	<div class="headerTitle">
-		<h1>RGME: Research in Graduate Mathematics Education</h1>
+<body>
+	<div class="sidebar">
+		<a href="#home" class="active">Home</a>
+		<a href = "/about" target = "_self">What is RGME?</a>
+		<a href = "./seminars" target = "_self">Seminar</a>
+		<a href = "./resources" target = "_self">Resources & Links</a>
 	</div>
 
-	<div class="row">
-		<div class="column">
-			<div class="block">
-				<h2> Rationale </h2>
-				<p>Recently, there has been significant interest in graduate mathematics education from both practitioners and researchers. Despite this significant interest from various stakeholders in the mathematical sciences, there have been few formal research venues (or “homes”) for this work to occur in a sustained fashion. We envision this working group as filling this gap and providing space for stakeholders—researchers, leaders in graduate education, graduate mathematics faculty, and <i>graduate students</i>—to convene and work collaboratively on research-based solutions to improving graduate mathematics education. 
-				</p>
-				<p>
-					To be clear, we use “graduate mathematics education” as an umbrella term to refer to graduate education in the mathematical sciences. Our definition of “graduate student” is also purposefully broad and includes mathematics education graduate students. 
-					
-				</p>
-			</div> 
-
-			<div class="block">
-				<h2> Seminar Schedule </h2>
-				<p>Hi!</p>
-			</div> 
+	<div class="content">
+		<div style="padding-left:16px; max-width: 500px;">
+			<h1>RESEARCH in GRADUATE MATHEMATICS EDUCATION</h1>
 		</div>
 
-		<div class="column">
-			<div class="block">
-				<h2> Links</h2>
-				<p><a href = "./previous_seminars.html" target = "_self">Previous Seminars</a></p>
-				<p><a href = "./WGRUME2024.html" target = "_self">Notes from the Working Group in the 2024 Conference on RUME</a></p>
-				<p><a href = "./resources_publishing.html" target = "_self">Resources for Publishing RGME-type work</a></p>
-				<p>etc...?</p>
-			</div> 
-
-			<div class="block">
-				<h2> News </h2>
-				<p>(Example) The RGME group will be holding a working group at the 2025 Conference on RUME, February 27 - March 1 in Alexandria, VA!
-				</p>
-			</div> 
-		</div>
-
-		<div class="column">
-			<div class="block">
-				<h2> Organizers</h2>
-				<ul>
-					<li></li>
-				</ul>
-
-				<p>Contact Email: </p>
-			</div> 
+		<div style="max-width: 500px; padding-left: 16px; padding-top: 1em;">
+			<p>We envision this group as becoming a space for formal research venues (or “homes”) for the rising significant interest in graduate mathematics education from both practitioners and researchers. </br> </br> We aim to provide space for stakeholders—researchers, leaders in graduate education, graduate mathematics faculty, and graduate students—to convene and work collaboratively on research-based solutions to improving graduate mathematics education.</p>
 		</div>
 	</div>
 
-	<div class="PAD"></div>
-
-</font> 
 </body>
+
 </html>
