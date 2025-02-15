@@ -24,37 +24,18 @@
 		line-height: 1em;
 		text-align: left;
 		font-size: 25px;
-		padding-top: 5px;
-		padding-bottom: 5px;
-	}
-	p {
-		max-width: 80%;
-		margin: auto;
-		text-align: left;
-		font-size: 1em;
-	}
-	div.title {
-		clear: both;
-		max-width: 80%;
-		margin: auto;
-		line-height: 0.9em;
-		text-align: left;
-		font-family: 'Roboto Thin', sans-serif;
-		vertical-align: middle;
-		font-size: 40px;
-		color: #992b2b;
-		padding-top: 20px;
-		padding-bottom: 20px;
+		padding: 10px;
 	}
 	div.gall {
-		max-width: 80%;
+		max-width: 100%;
 		margin: auto;
+		padding: 10px;
 		line-height: 1.5em;
 		text-align: left;
 	}
 	div.gall img {
 		display: inline-block;		
-		width: 30%;
+		width: 20%;
 		margin-right: 0.2em;
 	}
 	iframe {
@@ -73,9 +54,10 @@
 	a { text-decoration: none; font-style: bold; }
 	a:link { color: blue; }
 	a:visited { color: blue; }
-	a:hover { color: pink; }
+	a:hover { color: rgb(0, 132, 255); }
 	a:active { color: blue; }
 	hr { opacity: 1.0; max-width: 85%;}
+	
 	/* Menu Stuff */
 	ul.special {
 	  list-style-type: none;
@@ -92,41 +74,20 @@
 	  padding: 10px 12px;
 	  text-decoration: none;
 	}
-	li.special a:hover:not(.active) {  background-color: #F07B7B;}
+	li.special a:hover:not(.active) {  background-color: #3620b3;}
 	.active {  background-color: #e75c5c;}
 
-	/* Video Stuff*/
-	div.VIDEO {
-		margin: 5px;
-		border: 1px solid #ccc;
-		float: left;
-		width: 480px;
-	}
-	div.VIDEO img {
-		width: 100%;
-		height: auto;
-	}
-	div.DESC {
-		padding: 15px;
-		text-align: center;
-	}
-
-	div.note {
-		max-width: 100%;
-		line-height: 1.5em;
-		text-align: right;
-		font-size: 14px;
-		position: fixed;
-     	padding: 5px;
-     	bottom: 5px;
-     	right: 5px;
-     	background-color: gray;
-     	border: 1px solid #ffffff;
-     	color: #E6E6E6;
-	}
 	div.PAD {
 		padding-bottom:5em;
 	}
+
+	@media screen and (min-width: 1500px) {
+        .gall{
+            float: left;
+            width: 70%;
+            padding: 0 5px;
+        }
+    }
 
 </style>
 
@@ -144,80 +105,31 @@
 	</ul>
 
 	</br>
-	<div class="note">contact: jcristobal2[at]unl[dot]edu</div>
 	<!-- Actual Body -->
-
-	<p>Did you want to see <a href = "/design.html#video" target = "_self">Video?</a> or <a href = "/design.html#design" target = "_self">Design?</a></p>
-
-	<a name="video"> <div class = "title"> VIDEO PORTFOLIO </div> </a>
-	
-	<div class="gall">
-		<div class="VIDEO">
-			<iframe width="480" height="270" src="https://unl.yuja.com/V/Video?v=7108173&node=34303336&a=111425084&autoplay=1"> </iframe>
-			<div class="DESC">An example of the videos I made for the <u><a href = "https://mathbooks.unl.edu/PreCalculus/part-1.html" target="_self">Open Educational Resource for UNL's Intermediate Algebra Course</a></u>.</div>
-		</div>
-
-		<div class="VIDEO">
-			<iframe width="480" height="270" src="https://www.youtube.com/embed/9XYLCEyZOKE"> </iframe>
-			<div class="DESC">Addressing a common question from prospective graduate students.</div>
-		</div>
-
-		<div class="VIDEO">
-			<iframe width="480" height="270" src="https://www.youtube.com/embed/gzELnyJzPCs"> </iframe>
-			<div class="DESC">Discussing my projected timeline for my Mathematics PhD (as a second-year).</div>
-		</div>
-		
-		<div class="VIDEO">
-			<iframe width="480" height="270" src="https://www.youtube.com/embed/jUTKe4C0tFQ"> </iframe>
-			<div class="DESC">Celebrating my graduation at UCLA, my way of commemorating this event.</div>
-		</div>
-
-		<div class="VIDEO">
-			<iframe width="480" height="270" src="https://www.youtube.com/embed/RpWYanV16gk"> </iframe>
-			<div class="DESC"> Discussing what I learned throughout the graduate application process. </div>
-		</div>
-
-		<div class="VIDEO">
-			<iframe width="480" height="270" src="https://www.youtube.com/embed/wdn42A_kJl0"> </iframe>
-			<div class="DESC"> My trip to Missouri to attend Math Alliance's Field of Dreams conference. </div>
-		</div>
-	</div>
-
-	<a name="design"> <div class = "title"> DESIGN PORTFOLIO </div> </a>
+	<h1>Select Artworks</h1>
 
 	<div class = "gall">
-		<h1>Real-life Art</h1>
 		<img src="img/red-painting.jpg" alt = "red" class = "image">
 		<img src="img/yellow-painting.jpg" alt = "yellow" class = "image">
 		<img src="img/blue-painting.jpg" alt = "blue" class = "image">
-	</div>
+		<img src="img/sakura.png" alt = "sakura" class = "image">
 
-	<div class = "gall">
-		<h1>Favorite Digital Art</h1>
-		<img src="img/RIEBER-TERRACE.png" alt = "RieberT" class = "image">
-		<img src="img/LA-HACKS-2018.png" alt = "Star" class = "image">
-		<img src="img/ASUCLA-2018.jpg" alt = "ASUCLA2018" class = "image">
-		<img src="img/20th-2.png" alt = "20th" class = "image">
-		<img src="img/CHUU-Manga.png" alt = "Chuu" class = "image">
-		<img src="img/Kim-Lip-Midnight-Clock.png" alt = "kimlip" class = "image">
-	</div>
-
-	<div class="gall">
 		<div class = "vertpic">
-			<img src="img/October-2.png" alt = "October1" class = "image">
-
 			<img src="img/dec2.png" alt = "December1" class = "image">
 
 			<img src="img/feb2.png" alt = "February1" class = "image">
 
 			<img src="img/apr2.png" alt = "April1" class = "image">
 
-			<img src="img/may1.png" alt = "May1" class = "image">
 			<img src="img/may2.png" alt = "May2" class = "image">
 		</div>
+
+		<img src="img/RIEBER-TERRACE.png" alt = "RieberT" class = "image">
+		<img src="img/20th-2.png" alt = "20th" class = "image">
+		<img src="img/CHUU-Manga.png" alt = "Chuu" class = "image">
+		<img src="img/Kim-Lip-Midnight-Clock.png" alt = "kimlip" class = "image">
 	</div>
 
-	<div class="PAD"></div>
 </font> 
 </body>
 </html>

@@ -20,47 +20,30 @@
 		margin: auto;
 		background-color: #E6E6E6;
 		font-family: 'Roboto', sans-serif;
-		background-image: linear-gradient(rgba(119, 119, 119, 0.3), rgba(221, 221, 221, 0.3)),
+		/* background-image: linear-gradient(rgba(119, 119, 119, 0.3), rgba(221, 221, 221, 0.3)),
 		url("img/red-painting.jpg");
 		background-position:10% 55%;
 		background-size: cover;
-		background-attachment: fixed;
-	}
-	div.lefty {
-		text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-		margin-left: 5%;
-		margin-right: auto;
-		margin-top: 1em;
-		margin-bottom:1em;
-		max-width: 80%;
-		text-align: left;
+		background-attachment: fixed;*/
 	}
 	p {
-		line-height: 2em;
-		padding-top: 1%;
-		padding-bottom: 1%;
-		padding-right: 1%;
-		padding-left: 1%;
-		margin-top:2em;
 		font-size: 15px;
 		padding:10px;
 		line-height: 1.5em; 
-		background-color: #f1f1f1;	
-		box-shadow: 1px 1px 10px rgb(48, 48, 48);
+		text-align: left;
 	}
-	img {
-		max-width: 25%;
-		max-height: 12em;
-		float: left;
-		padding:10px;
-		margin-right:10px;
-	}
+
+	br {
+   display: block;
+   margin: 10px 0;
+}
+
 	a { text-decoration: none; font-style: bold; }
 	a:link { color: black; }
 	a:visited { color: black; }
 	a:hover { color: white; }
 	a:active { color: black; }
-	hr { opacity: 1.0; max-width: 85%;}
+
 	/* Menu Stuff */
 	ul.special {
 	  list-style-type: none;
@@ -80,21 +63,75 @@
 	li.special a:hover:not(.active) {  background-color: #F07B7B;}
 	.active {  background-color: #e75c5c;}
 
-	div.note {
-		max-width: 100%;
-		line-height: 1.5em;
-		text-align: right;
-		font-size: 14px;
-		position: fixed;
-     	padding: 5px;
-     	bottom: 5px;
-     	right: 5px;
-     	background-color: gray;
-     	border: 1px solid #ffffff;
-     	color: #E6E6E6;
-	}
 	div.PAD {
 		padding-bottom:5em;
+	}
+
+	/* Video Stuff*/
+	div.VIDEO {
+		margin: 5px;
+		border: 1px solid #ccc;
+		float: left;
+		width: 480px;
+	}
+	div.VIDEO img {
+		width: 100%;
+		height: auto;
+	}
+	div.DESC {
+		padding: 15px;
+		text-align: center;
+		margin:1px;
+		background-color: white;
+	}
+
+	/* Float four columns side by side */
+	.column {
+		float: left;
+		width: 48%;
+		padding: 0 10px;
+		padding-top: 10px;
+	}
+
+	/* Remove extra left and right margins, due to padding 
+	.row {margin: 0 -5px;}*/
+
+	/* Clear floats after the columns */
+	.row:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+	/* Responsive columns */
+	@media screen and (max-width: 600px) {
+		.column {
+			width: 100%;
+			display: block;
+			margin-bottom: 20px;
+		}
+	}
+
+	@media screen and (min-width: 1500px) {
+        .column{
+			float: left;
+			width: 24%;
+			padding: 0 10px;
+			padding-top: 10px;
+        }
+    }
+
+	/* Style the counter cards */
+	.card {
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+		padding: 16px;
+		text-align: center;
+		background-color: #f1f1f1;
+	}
+
+	.card img {
+		max-width: 100%;
+		text-align: left;
 	}
 
 </style>
@@ -114,64 +151,125 @@
 	
 	</br>
 
-	<div class="note">contact: jcristobal2[at]unl[dot]edu</div>
 	<!-- Actual Body -->
-<div class="lefty">
-	<p>
-		<img src ="/img/Profile-2024.png">
-		Hello, my name is Johan Cristobal (he/they), a fifth-year graduate student in the Mathematics Department at University of Nebraska-Lincoln (UNL), pursuing a doctorate degree in Math! I am finishing my dissertation in Mathematics Education this upcoming spring! I advanced to Candidacy in Fall 2023! 🎉 I graduated from University of California, Los Angeles (UCLA) in the chaotic year of 2020 with a Bachelor's of Science in Mathematics of Computation. I received my Master's of Science in Mathematics from UNL in December 2021! 🎉🎉🎉	</br></br>
 
-	<font style="color:#ba1818">
-		<b>My main goal in life is to inspire people to do whatever brings them joy and fulfillment, and I think being a mathematics instructor will help me do just that.</b>
-	</font>	</br></br>
+	<div class="row">
+		<div class="column">
+			<div class="card">
+				<img src ="./img/Profile-2024.png">
+		  	</div>
+		</div>
 
-		A little autobiography: I was born near Manila, Philippines and grew up there until I was nine. My entire family relocated to the United States in 2007 and since then I have moved more times than I would've liked. I have lived in about 14 different places now, Lincoln being the 14th place. Though it's sad to move away from friends, I am lucky to have been able to experience different things. I learned that I'm not the best in the cold, so living in Nebraska has been an immense challenge, physically and mentally.
-	</br></br>
-		My main hobbies include playing video games on Twitch, listening to music, making art, cooking, and other creative things. I also dabble in writing essays and poetry, the former of which you can check out in <a href="/writings" target="_blank"><b>Writings</b></a>.
-	</p>
+		<div class="column">
+			<div class="card">
+				<p>Hello, my name is Johan Cristobal (he/him), a fifth-year graduate student in the Mathematics Department at University of Nebraska-Lincoln (UNL), pursuing a doctorate degree in Mathematics! I am finishing my dissertation in Mathematics Education this May 2025! I advanced to Candidacy in Fall 2023! 🎉 I graduated from University of California, Los Angeles (UCLA) in the chaotic year of 2020 with a Bachelor's of Science in Mathematics of Computation. I received my Master's of Science in Mathematics from UNL in December 2021! 🎉🎉🎉</p>
+		  	</div>
+		</div>
 
-	</br>
+		<div class="column">
+			<div class="card">
+				<p><b>A little autobiography:</b> I was born near Manila, Philippines and grew up there until I was nine. My entire family relocated to the United States in 2007 and since then I have moved more times than I would've liked. I have lived in about 14 different places now, Lincoln being the 14th place. Though it's sad to move away from friends, I am lucky to have been able to experience different things. I learned that I'm not the best in the cold, so living in Nebraska has been an immense challenge, physically and mentally.</p>
+		  	</div>
+		</div>
 
-	<p>
-		In <font color= "red">math</font>, I like differential equations and education. In my time in grad school, I've found that there's a non-empty intersection between differential equations and machine learning. Whenever I get around to research, that is where I'll be. Education has always been at the forefront of my motivation, and I would love to research the effects of virtual classrooms on the motivation of students and community building aspects that were natural to in-person teaching.
-	</p>
+		<div class="column">
+			<div class="card">
+				<p>
+					In <font color= "red">math</font>, I like differential equations and education. In my time in grad school, I've found that there's a non-empty intersection between differential equations and machine learning. Whenever I get around to research, that is where I'll be. Education has always been at the forefront of my motivation, and I would love to research the effects of virtual classrooms on the motivation of students and community building aspects that were natural to in-person teaching. You can read about how my <a href="https://www.johanmath.com/writings/teaching-philosophy" target="_blank"><b><font color= "blue">teaching philosophy evolved</font></b></a>.
+				</p>
+		  	</div>
+		</div>
 
-	<p>
-		For my dissertation, I focus on Math Education. In particular, I am researching the transition of mathematics graduate students into instructors of record. The goal is to extract information from lived experiences to further improve the professional development and orientation we provide to future Graduate Student Instructors.
-	</p>
-	<p>
-		In <font color = "blue">the arts</font>, I like to create digital art through the Adobe Suite. I can decently use Photoshop, Illustrator, InDesign, and Premiere Pro. And I am also currently learning how to use Adobe Dreamweaver and Adobe Audition! I also like music, I dabble in a bit of basic compositions when I get the rare inspiration.
-	</p>
-	<p>
-		In <font color = "#0E8606">other sciences</font>, I like computer science, but I lean more on the theoretical side of things. But don't be fooled, I can proficiently code in C/C++, while being vaguely efficient in Python and LISP. I also like Physics, mainly the basic stuff because I spent a year facilitating discussions and sections for an introductory Physics class.
-	</p>
+		<div class="column">
+			<div class="card">
+				<p>My main hobbies include playing video games, listening to music, making videos and art, cooking, and other creative things. I also dabble in casual writing essays and poetry, which you can check out in <a href="/writings" target="_blank"><b>Writings</b></a>. I also have a <a href = "https://www.youtube.com/user/johanmode"><b>Youtube channel</b></a> and below this page are some videos I made that I like a lot.</p>
+		  	</div>
+		</div>
+
+		<div class="column">
+			<div class="card">
+				<p>
+					In <font color = "blue">the arts</font>, I like to create digital art through the Adobe Suite. I can decently use Photoshop, Illustrator, InDesign, and Premiere Pro. And I am also currently learning how to use Adobe Dreamweaver and Adobe Audition! I also like music, I dabble in a bit of basic compositions when I get the rare inspiration.
+				</p>
+		  	</div>
+		</div>
+
+		<div class="column">
+			<div class="card">
+				<p>
+					In <font color = "#0E8606">other sciences</font>, I like computer science, but I lean more on the theoretical side of things. But don't be fooled, I can proficiently code in C/C++, while being vaguely efficient in Python and LISP. I also like Physics, mainly the basic stuff because I spent a year facilitating discussions and sections for an introductory Physics class.
+				</p>
+		  	</div>
+		</div>
+
+		<div class="column">
+			<div class="card">
+				<p><b>My main goal in life is to inspire people to do whatever brings them joy and fulfillment, and I think being a mathematics instructor will help me do just that.</b></p>
+		  	</div>
+		</div>
+
+		<div class="column">
+			<div class="card">
+				<p>
+					<b>I'd like to take this section to provide quotes I heard in my life that I really like:</b> </br>
+					"<i>Kung masaya ka, masaya rin ako. Wala akong paki-alam kung ano ang ginagawa mo sa college, just enjoy life. </i>" my dad, Roberto </br> </br>
+					"<i>We've always been able to do more with less, so you can do this.</i>" my sister, Meziah </br> </br>
+					"<i>Dude, stop trying to be such a perfectionist. It's the imperfections that make it perfect.</i>" my friend, Andgielika </br> </br>
+					"<i>One step at a time.</i>" my friend, Andgielika </br> </br>
+					"<i>Fail Forward Fast.</i>" one of my instructors at UCLA, Sassone </br> </br>
+					"<i>It took one person to believe in me, to tell me I could do this for me to do this.</i>" my favorite professor from UCLA, De Santiago </br> </br>
+					"<i>You're already doing what you set out to do.</i>" a lot of people </br> </br>
+					"<i>I'm so proud of you.</i>" a lot of people, my past selves in letters
+				</p>
+		  	</div>
+		</div>
+	</div>
+
+	<h1>Select Videos</h1>
+
+	<p>If you would like to see more, you can visit my YouTube page at <a href="https://www.youtube.com/@johango" target="_blank">https://www.youtube.com/@johango</a>.</p>
 	
-	<p> 
-		In my attempt to learn more about math and how to be a good teacher and mentor, I <a href="https://www.youtube.com/playlist?list=PLK2oKg9Dz6JjLuMra0qdNZsHl0MCJvw4Z"><b>pursued a graduate degree</b></a>.
-		</br>
-		In my attempt to learn more about the arts, I have a <a href = "https://www.youtube.com/user/johanmode"><b>Youtube channel</b></a>. I learned how to storyboard, video edit, and even compose music for some of my videos. I also found that using YouTube has helped tremendously in practicing speaking publically, in person and through Zoom.
-		</br>
-		In my attempt to learn more about website development, I started this website, which hopefully shows how much I've learned in web-design.
-	</p>
-	
-	<p> As for everything else? <br>If it's not already on my list of things to look into, then I'll get my grubby hands on it someday.
-	</p>
-</div>
+	<div class="gall">
+		<div class="VIDEO">
+			<iframe width="480" height="270" src="https://unl.yuja.com/V/Video?v=7108173&node=34303336&a=111425084&autoplay=1"> </iframe>
+			<div class="DESC">An example of the videos I made for the <u><a href = "https://mathbooks.unl.edu/PreCalculus/part-1.html" target="_self">Open Educational Resource for UNL's Intermediate Algebra Course</a></u>.</div>
+		</div>
 
-	<div class="PAD"></div>
-<div class="lefty">
-	<p>
-		<b>I'd like to take this section to provide quotes I heard in my life that I really like:</b> </br>
-		"<i>Kung masaya ka, masaya rin ako. Wala akong paki-alam kung ano ang ginagawa mo sa college, just enjoy life. </i>" my dad, Roberto </br>
-		"<i>We've always been able to do more with less, so you can do this.</i>" my sister, Meziah </br>
-		"<i>Dude, stop trying to be such a perfectionist. It's the imperfections that make it perfect.</i>" my friend, Andgielika </br>
-		"<i>One step at a time.</i>" my friend, Andgielika
-		"<i>Fail Forward Fast.</i>" one of my instructors at UCLA, Sassone </br>
-		"<i>It took one person to believe in me, to tell me I could do this for me to do this.</i>" my favorite professor from UCLA, De Santiago </br>
-		"<i>You're already doing what you set out to do.</i>" a lot of people </br>
-		"<i>I'm so proud of you.</i>" a lot of people, my past selves in letters
-	</p>
-</div>
+		<div class="VIDEO">
+			<iframe width="480" height="270" src="https://www.youtube.com/embed/aKxXt18-KLA"> </iframe>
+			<div class="DESC"> To add to the conversation of why people leave grad school, I chime in with why I stay(ed). </div>
+		</div> 
+
+		<div class="VIDEO">
+			<iframe width="480" height="270" src="https://www.youtube.com/embed/HE6XIPJRokY"> </iframe>
+			<div class="DESC"> My first conference presentation at the Research in Undergraduate Mathematics Education conference. </div>
+		</div>
+
+		<div class="VIDEO">
+			<iframe width="480" height="270" src="https://www.youtube.com/embed/9XYLCEyZOKE"> </iframe>
+			<div class="DESC">Addressing a common question from prospective graduate students.</div>
+		</div>
+
+		<div class="VIDEO">
+			<iframe width="480" height="270" src="https://www.youtube.com/embed/gzELnyJzPCs"> </iframe>
+			<div class="DESC">Discussing my projected timeline for my Mathematics PhD (as a second-year).</div>
+		</div>
+		
+		<div class="VIDEO">
+			<iframe width="480" height="270" src="https://www.youtube.com/embed/jUTKe4C0tFQ"> </iframe>
+			<div class="DESC">Celebrating my graduation at UCLA, my way of commemorating this event.</div>
+		</div>
+
+		<div class="VIDEO">
+			<iframe width="480" height="270" src="https://www.youtube.com/embed/RpWYanV16gk"> </iframe>
+			<div class="DESC"> Discussing what I learned throughout the graduate application process. </div>
+		</div>
+
+		<div class="VIDEO">
+			<iframe width="480" height="270" src="https://www.youtube.com/embed/wdn42A_kJl0"> </iframe>
+			<div class="DESC"> My trip to Missouri to attend Math Alliance's Field of Dreams conference. </div>
+		</div>
+	</div>
 
 	<div class="PAD"></div>
 
