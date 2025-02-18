@@ -18,63 +18,15 @@
 		max-width: 100%;
 		margin: auto;
 		font-family: 'Roboto', sans-serif;
-		background-image: linear-gradient(rgba(119, 119, 119, 0.3), rgba(221, 221, 221, 0.3)),
-		url("img/yellow-painting.jpg");
-		background-position:10% 55%;
-		background-size: cover;
-		background-attachment: fixed;		
+		background-color: #E6E6E6;	
 	}
-	h1 {
-		max-width: 100%;
-		padding-top:20px;
-		padding-left: 2%; 
-		margin: auto;
-	}
-	h4 {
-		max-width: 100%;
-		padding-top: 1em;
-		padding-left: 2em;
-		padding-right: 2em;
-		padding-bottom: 1em; 
-		margin: auto;
-	}
-	div.lefty {
-		margin-left: 5%;
-		margin-right: auto;
-		margin-top: 1em;
-		margin-bottom:2em;
-		max-width: 80%;
-		text-align: left;		
-		background-color: #f1f1f1;	
-		box-shadow: 1px 1px 10px rgb(48, 48, 48);
-		padding-right: 2em ;
-	}
-	div.leftybody {
-		background-color: #f1f1f1;	
-		box-shadow: 1px 1px 10px rgb(48, 48, 48);
-		margin-left: 5%; 
-		margin-right: auto;
-		margin-top: 1em;
-		margin-bottom:1em;
-		max-width: 15em;
-		text-align: center;
-		padding-top: 1px;
-		padding-bottom: 1px;
+	h2 {
+		padding-left: 10px;
 	}
 	p {
-		line-height: 2em;
-		padding-top: 1%;
-		padding-bottom: 1%;
-		padding-right: 1%;
-		padding-left: 2%;
+		padding-left: 10px;
+		padding-right: 10px;
 		font-size: 15px;
-		line-height: 1.5em; 
-	}
-	img {
-		max-width: 30%;
-		float: left;
-		padding-right:15px;
-		padding-bottom:15px;
 	}
 	a { text-decoration: none; font-style: bold; }
 	a:link { color: black; }
@@ -101,27 +53,63 @@
 	li.special a:hover:not(.active) {  background-color: #F07B7B;}
 	.active {  background-color: #e75c5c;}
 
-	div.note {
-		max-width: 100%;
-		line-height: 1.5em;
-		text-align: right;
-		font-size: 14px;
-		position: fixed;
-     	padding: 5px;
-     	bottom: 5px;
-     	right: 5px;
-     	background-color: gray;
-     	border: 1px solid #ffffff;
-     	color: #E6E6E6;
-	}
 	div.PAD {
-		padding-bottom:10em;
+		padding-bottom:5em;
 	}
 	ol.normal,ul.normal {
 		max-width: 100%;
 		font-size: 14px;
-		padding-left: 4em;
+		padding-left: 2em;
 		padding-bottom:1em;
+	}
+
+	/* Float four columns side by side */
+	.column {
+		float: left;
+		width: 48%;
+		padding: 0 10px;
+		padding-top: 10px;
+	}
+
+	/* Remove extra left and right margins, due to padding 
+	.row {margin: 0 -5px;}*/
+
+	/* Clear floats after the columns */
+	.row:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+	/* Responsive columns */
+	@media screen and (max-width: 600px) {
+		.column {
+			width: 94%;
+			display: block;
+		}
+	}
+
+	@media screen and (min-width: 1500px) {
+        .column{
+			float: left;
+			width: 24%;
+			padding: 0 10px;
+			padding-top: 10px;
+        }
+    }
+
+	/* Style the counter cards */
+	.card {
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+		padding: 16px;
+		text-align: left;
+		background-color: #f1f1f1;
+		margin-top: 1em;
+	}
+
+	.card img {
+		max-width: 100%;
+		text-align: left;
 	}
 
 </style>
@@ -139,67 +127,76 @@
 	  <li class = "special"><a href = "/design" target = "_self">ART</a></li>
 	</ul>
 
-	</br>
+	<div class="row">
+		<div class="column">
+			<div class="card">
+				<img src ="./img/johan-teaching.png">
 
-	<div class="leftybody">
-		<p>
-			<b>This is my <a href="/Cristobal_CV_2025.pdf" target="_blank" style="color:#d00000">curriculum vitae</b></a>.
-		</p>
+				<p> <b>Here is my <a href="/Cristobal_CV_2025.pdf" target="_blank" style="color:#d00000">curriculum vitae</b></a>.
+				</p>
+		  	</div>
+
+			<div class="card" style="padding-top: 1em;">
+				<p>
+					It is key in my teaching that I adhere to the growing philosophy I have. After my first semester of teaching as the instructor of record, I wrote where my teaching philosophy was, and I want to share that with you here through my essay of <a href="/writings/teaching-philosophy.html" target="_blank" style="color:red"><b>Teaching Philosophy Evolves</b></a>.
+				</p>
+		  	</div>
+		</div>
+
+		<div class="column">
+			<div class="card">
+				<h2> Teaching at UNL </h2>
+				<ol class = "normal">
+					<li>Fall 2024 - Math 103, College Algebra & Trigonometry as Instructor</li>
+					<li>Fall 2024 - Math 97, Seminar for Mathematics Learning Assistants as Instructor and as Course Developer </li></br>
+					<li>Spring, Summer 2024 - not teaching</li>
+					<li>Fall 2023 - Math 221, Differential Equations as TA (three sections)</li> </br>
+					<li>Summer 2023 - Algebra Course Developer</li>
+					<li>Spring 2023 - Math 302, Mathematical Modeling (for Pre-service Mathematics Teachers) as Instructor</li>
+					<li>Fall 2022 - Math 101C, College Algebra Co-requisite as Instructor and as Course Developer</li> </br>
+					<li>Summer 2022 - Math 221, Differential Equations as Tutor</li>
+					<li>Summer 2022 - Math 830/831, Ordinary and Partial Differential Equations as Qualifying Exam Review Facilitator</li>
+					<li>Spring 2022 - Math 101, College Algebra as Instructor</li>
+					<li>Fall 2021 - Math 100A, Intermediate Algebra as Instructor</li> </br>
+					<li>Summer 2021 - Math 804T, Experimentation, Conjecture, and Reasoning as TA</li>
+					<li>Spring 2021 - MATH 107, Calculus II as TA</li>
+					<li>Spring 2021 - MATH 104, Applied Calculus as Grader</li>
+					<li>Fall 2020 - MATH 106, Calculus I as TA (two sections)</li> </br>
+				</ol>
+		  	</div>
+		</div>
+
+		<div class="column">
+			<div class="card">
+				<h2> My Own Curriculum Development: Math X01 Introduction to Proofs </h2>
+				<p>
+					As a personal project to learn how to develop a course from the ground up, I have worked on an introduction to proofs course. This course would be intended for students who have never taken a proofs course, and may have some knowledge about Calculus 1 already. I am not assuming my imaginary students know more than pre-calculus. </br> </br>
+						
+					You can check out the course syllabus here: <a href="/math-x01/Math X01 - Intro to Proofs Syllabus.pdf" target="_blank" style="color:red"><b>Math X01 Introduction to Proofs Syllabus</b></a>. Here is a preview of the first week's content, <a href="/math-x01/Intro to Proofs Week 1.pdf" target="_blank" style="color:red"><b>Week 1 Lesson Plan and Materials</b></a>!
+				</p>
+		  	</div>
+		</div>
+
+		<div class="column">
+			<div class="card">
+				<h2> Curriculum Development at University of Nebraska-Lincoln </h2>
+				<p>
+					As a Course Developer, I focused on the Algebra courses of the department, Intermediate Algebra, College Algebra, and College Algebra Co-Requisite. The changes I've made in Intermediate Algebra and College Algebra are a direct change to the Co-Requisite. During Summer 2024, I had the pleasure of further developing the seminar course for the Learning Assistants of the Mathematics Department, where I worked to establish a better timeline of topics and assignments that better addressed equitable teaching practices.
+				</br></br>
+					For the Intermediate Algebra course, I recorded 30+ videos to be embedded into the Online Education Resource (OER) we provide to students for free. This is the textbook used for the course. You can find the videos in each section of the textbook a "Supplemental Videos" section. Here is the link for the first section of Intermediate Algebra: <b><a href="https://mathbooks.unl.edu/PreCalculus/Numbers-and-Operations.html" target="_blank" style="color:#d00000">https://mathbooks.unl.edu/PreCalculus/Numbers-and-Operations.html</a></b>. Here is the link for all the supplemental videos for the Intermediate Algebra course that I recorded: <b><a href="https://mathbooks.unl.edu/PreCalculus/subsection-179.html" target="_blank" style="color:#d00000">https://mathbooks.unl.edu/PreCalculus/subsection-179.html</a></b>.
+				</br></br>
+					For the College Algebra course, I reordered the sections of the first chapter to have better scaffolding and sequencing of topics. For example, putting the function notation topic before the rate of change formula which uses function notation. This required updating the course workbook and homework to also scaffold accordingly.
+				</br></br>
+					For both courses, I learned how to update the OER and work with the Online Homework Platform (WeBWorK) for these courses.
+				</br></br>
+					For Math 97 Seminar for Mathematics Learning Assistants, this is a pedagogy course for the undergraduates that serve as assistants to UNL's precalculus and introduction to proofs courses. I co-developed the curriculum and materials for this weekly seminar. I also made a structured observation and reflection assignment for the Learning Assistants which faciliated their metacognition and development as future instructors!
+				</br></br>
+					On an unofficial capacity, for Math 302 Mathematical Modeling (for Pre-Service Mathematics Teachers), I developed guided notesheets for students to use for notetaking during class, as well as guide the instructors in lecture. These have been passed onto the new instructors. If you would like to access them, please email me.
+				</p>
+		  	</div>
+		</div>
 	</div>
 
-	<div class="lefty"><h4>
-		My teaching philosophy story that I wrote after my first semester of teaching as instructor of record and I believe it to a pivotal point in the development of my philosophy which you can read here: <a href="/writings/teaching-philosophy.html" target="_blank" style="color:red">Teaching Philosophy Evolves</a>.</h4>
-	</div>
-
-</br>
-
-	<div class="lefty">
-		<h1> Curriculum Development: Math X01 Introduction to Proofs </h1>
-		<p>
-			As a personal project to learn how to develop a course from the ground up, I have worked on an introduction to proofs course. This course would be intended for students who have never taken a proofs course, and may have some knowledge about Calculus 1 already. I am not assuming my imaginary students know more than pre-calculus.
-			
-			You can check out the course syllabus here: <a href="/math-x01/Math X01 - Intro to Proofs Syllabus.pdf" target="_blank" style="color:red">Math X01 Introduction to Proofs Syllabus</a>. Here is a preview of the first week's content! <a href="/math-x01/Intro to Proofs Week 1.pdf" target="_blank" style="color:red">Week 1 Lesson Plan and Materials</a>.
-	</div>
-	
-	<div class="lefty">
-
-	<h1> Teaching </h1>
-		<ol class = "normal">
-			<li>Fall 2024 - Math 103, College Algebra & Trigonometry</li>
-			<li>Fall 2024 - Math 97, Seminar for Mathematics Learning Assistants (<b>First time this is offered</b>) </li></br>
-			<li>Spring, Summer 2024 - not teaching</li>
-			<li>Fall 2023 - Math 221, Differential Equations as TA (three sections)</li> </br>
-			<li>Summer 2023 - Algebra Course Developer</li>
-			<li>Spring 2023 - Math 302, Mathematical Modeling (for Pre-service Mathematics Teachers) as Instructor</li>
-			<li>Fall 2022 - Math 101C, College Algebra Co-requisite as Instructor and as Course Developer</li> </br>
-			<li>Summer 2022 - Math 221, Differential Equations as Tutor</li>
-			<li>Summer 2022 - Math 830/831, Ordinary and Partial Differential Equations as Qualifying Exam Review Facilitator</li>
-			<li>Spring 2022 - Math 101, College Algebra as Instructor</li>
-			<li>Fall 2021 - Math 100A, Intermediate Algebra as Instructor</li> </br>
-			<li>Summer 2021 - Math 804T, Experimentation, Conjecture, and Reasoning as TA</li>
-			<li>Spring 2021 - MATH 107, Calculus II as TA</li>
-			<li>Spring 2021 - MATH 104, Applied Calculus as Grader</li>
-			<li>Fall 2020 - MATH 106, Calculus I as TA (two sections)</li> </br>
-			<li>Fall 2019 through Spring 2020 - Physics 1A, Mechanics, as Peer-Learning Facilitator at UCLA</li>
-		</ol>
-	</div>
-
-	<div class="lefty">
-	<h1> Curriculum Development at University of Nebraska-Lincoln </h1>
-	<p>
-		As a Course Developer, I mainly focused on the Algebra courses of the department, Intermediate Algebra, College Algebra, and College Algebra Co-Requisite. The changes I've made in Intermediate Algebra and College Algebra are a direct change to the Co-Requisite. During Summer 2024, I had the pleasure of further developing the seminar course for the Learning Assistants of the Mathematics Department, where I worked to establish a better timeline of topics and assignments that better addressed equitable teaching practices.
-	</br></br>
-		For the Intermediate Algebra course, I recorded 30+ videos to be embedded into the Online Education Resource (OER) we provide to students for free. This is the textbook used for the course. You can find the videos in each section of the textbook, scrolling down to the "Supplemental Videos" section. Here is the link for the first section of Intermediate Algebra: <b><a href="https://mathbooks.unl.edu/PreCalculus/Numbers-and-Operations.html" target="_blank">https://mathbooks.unl.edu/PreCalculus/Numbers-and-Operations.html</a></b>. Here is the link for all the supplemental videos for the Intermediate Algebra course that I recorded: <b><a href="https://mathbooks.unl.edu/PreCalculus/Numbers-and-Operations.html" target="_blank">https://mathbooks.unl.edu/PreCalculus/subsection-179.html</a></b>.
-	</br></br>
-		For the College Algebra course, I reordered the sections of the first chapter to have better scaffolding and sequencing of topics. For example, putting the function notation topic before the rate of change formula which uses function notation. This required updating the course workbook and homework to also scaffold accordingly.
-	</br></br>
-		For both courses, I learned how to update the OER and work with the Online Homework Platform (WeBWorK) for these courses.
-	</br></br>
-		For Math 97 Seminar for Mathematics Learning Assistants, this is a pedagogy course for the undergraduates that serve as assistants to UNL's precalculus and introduction to proofs courses. I co-developed the curriculum and materials for this weekly seminar. I also made a structured observation and reflection assignment for the Learning Assistants which faciliated their metacognition and development as future instructors!
-	</br></br>
-		On an unofficial capacity, for Math 302 Mathematical Modeling (for Pre-Service Mathematics Teachers), I developed guided notesheets for students to use for notetaking during class, as well as guide the instructors in lecture. These have been passed onto the new instructors. If you would like to access them, please email me.
-	</p>
-</div>
 	<div class="PAD"></div>
 
 </font> 
