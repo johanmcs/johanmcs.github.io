@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="css/common.css" type="text/css" />
 	<link rel="stylesheet" href="css/responsive.css" type="text/css" />
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet"/>
-	<link rel="icon" type="image/png" href="/img/Favicon.png" />
+	<link rel="icon" type="image/png" href="../img/Favicon.png" />
 </head>
 
 <style = "css">
@@ -18,50 +18,21 @@
 		max-width: 100%;
 		margin: auto;
 		font-family: 'Roboto', sans-serif;
-		background-image: linear-gradient(rgba(119, 119, 119, 0.3), rgba(221, 221, 221, 0.3)),
-		url("../img/blue-painting.jpg");
-		background-position:10% 55%;
-		background-size: cover;
-		background-attachment: fixed;
+		background-color: #E6E6E6;	
 	}
-	h1 {
-		max-width: 100%;
-		padding-top:20px;
-		padding-left: 0.5em; 
-		margin: auto;
-	}
-	div.lefty {
-		margin-left: 5%;
-		margin-right: auto;
-		margin-top: 1em;
-		margin-bottom:2em;
-		max-width: 80%;
-		text-align: left;		
-		background-color: #f1f1f1;	
-		box-shadow: 1px 1px 10px rgb(48, 48, 48);
-		padding-right: 2em ;
-		padding-bottom:0.2em;
+	h2 {
+		padding-left: 10px;
 	}
 	p {
-		line-height: 2em;
-		padding-top: 1%;
-		padding-bottom: 1%;
-		padding-right: 1%;
-		padding-left: 1em;
+		padding-left: 10px;
+		padding-right: 10px;
 		font-size: 15px;
-		line-height: 1.5em; 
-
-	}g {
-		max-width: 30%;
-		float: left;
-		padding-right:15px;
-		padding-bottom:15px;
 	}
 	a { text-decoration: none; font-style: bold; }
 	a:link { color: black; }
-	a:visited { color: black; }
+	a:visited { color: red; }
 	a:hover { color: red; }
-	a:active { color: black; }
+	a:active { color: red; }
 	hr { opacity: 1.0; max-width: 85%;}
 	/* Menu Stuff */
 	ul.special {
@@ -82,27 +53,63 @@
 	li.special a:hover:not(.active) {  background-color: #F07B7B;}
 	.active {  background-color: #e75c5c;}
 
-	div.note {
-		max-width: 100%;
-		line-height: 1.5em;
-		text-align: right;
-		font-size: 14px;
-		position: fixed;
-     	padding: 5px;
-     	bottom: 5px;
-     	right: 5px;
-     	background-color: gray;
-     	border: 1px solid #ffffff;
-     	color: #E6E6E6;
-	}
 	div.PAD {
 		padding-bottom:5em;
 	}
 	ol.normal,ul.normal {
 		max-width: 100%;
 		font-size: 14px;
-		line-height: 2.5em;
-		padding-left: 4em;
+		padding-left: 2em;
+		padding-bottom:1em;
+	}
+
+	/* Float four columns side by side */
+	.column {
+		float: left;
+		width: 48%;
+		padding: 0 10px;
+		padding-top: 10px;
+	}
+
+	/* Remove extra left and right margins, due to padding 
+	.row {margin: 0 -5px;}*/
+
+	/* Clear floats after the columns */
+	.row:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+	/* Responsive columns */
+	@media screen and (max-width: 600px) {
+		.column {
+			width: 94%;
+			display: block;
+		}
+	}
+
+	@media screen and (min-width: 1300px) {
+        .column{
+			float: left;
+			width: 24%;
+			padding: 0 10px;
+			padding-top: 10px;
+        }
+    }
+
+	/* Style the counter cards */
+	.card {
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+		padding: 16px;
+		text-align: left;
+		background-color: #f1f1f1;
+		margin-top: 1em;
+	}
+
+	.card img {
+		max-width: 100%;
+		text-align: left;
 	}
 
 </style>
@@ -120,68 +127,95 @@
 	  <li class = "special"><a href = "/design" target = "_self">ART</a></li>
 	</ul>
 
-	</br>
-
 	<!-- Actual Body -->
 
-	<div class="lefty">
-		<h1>Research</h1>
-		<p>
-			<b>This is my <a href="/Cristobal_CV_2025.pdf" target="_blank" style="color:#d00000">curriculum vitae</b></a>. This has a more thorough recounting of all the research projects I've been involved in! </br> </br>
+	<div class="row">
+		<div class="column">
+			<div class="card">
+				<img src ="../img/johan-presenting.png">
 
-			I love learning about differential equations. But, in my time in graduate school, I learned the nuanced difference between loving to learn something and loving to research something. So, for my doctoral disseration, I am focusing on Math Education research. On the practical side, I am researching the transition of mathematics graduate students into instructors of record. On the theoretical understanding, I am researching what frames of teaching and learning are and their place in shaping how instructors notice classroom events. </br> </br>
+				<p> <b>Here is my <a href="/Cristobal_CV_2025.pdf" target="_blank" style="color:#d00000">curriculum vitae</b></a>.
+				</p>
+		  	</div>
 
-			I hope that you'll be able to read more about it soon!
-		</p>
-	</div>
+			<div class="card">
+				<p> The CV above has more details on research projects I have been on, this page mostly serves to give links to materials or videos of my research. </br> </br>
+					
+				In short, my research log has mostly centered in undegraduate mathematics education research through working on several NSF-funded projects with the <a href="https://scimath.unl.edu/" target="_blank" style="color:red">Center for Science, Mathematics and Computer Science Education</a> at University of Nebraska-Lincoln. However, I am trying to move back or into (depending on your view) applied mathematics research and in computation PDEs. </a>.
+				</p>
+		  	</div>
+		</div>
+		
+		<div class="column">
+			<div class="card" style="padding-top: 1em;">
+				<h2>Research Journey</h2>
+				<p>
+					I have come a long way, relatively-speaking, in my journey to figure out what it is I want to do as a researcher. At first, I wanted to do partial differential equations research that modeled and animated solid-fluid interaction (similar to the works by <a href="https://math.ucdavis.edu/~jteran/" target ="_blank" style="color:red">Professor Joseph M. Teran</a>). </br> </br> 
+					
+					Then, I found out that I didn't actually want to stand at the pioneering edge of PDE research, instead I found a more personal research problem: <i>why do teachers teach the way that they do?</i> Mostly to understand how cultures of exclusion have perpetuated in mathematics classrooms for so long. This became the focus on my dissertation, using and developing a framework for understanding mathematics instructors' frames of teaching and of students' learning. In short, I found what things instructors think about when they think about their teaching or their students' learning of mathematics.</br> </br>
 
-	<div class="lefty">
-		<h1> Research Conference Talks </h1>
-			<ul class = "normal">
-				<li><b>Success, Struggle, Surprise, and Short-term Goals: Reflections from Mathematics Graduate Students Teaching.</b> January 2025, Joint Mathematics Meetings in Seattle, WA. <i>AMS Special Session on Research Presentations by Math Alliance Scholar Doctorates, II</i>. <a href="https://youtu.be/ht0_geTrGRc" target="_blank" style="color:#d00000"><b>Video Recording of the Talk</b></a> / <a href="/research/JMM_2025_MathAlliance.pdf" target="_blank" style="color:#d00000"><b>PDF of Slides</b></a>.</li>
-
-				<li><b>One graduate students' experience teaching for the first time.</b> January 2025, Joint Mathematics Meetings in Seattle, WA. <i>AMS Contributed Paper Session on Mathematics Education, I</i>. <a href="https://youtu.be/gFIJFILrZkE" target="_blank" style="color:#d00000"><b>Video Recording of the Talk</b></a> / <a href="/research/JMM_2025_AMS_MathEd.pdf" target="_blank" style="color:#d00000"><b>PDF of Slides</b></a>.</li>
-
-				<li><b>Successes, Struggles, Surprises, and Short-term Goals of Mathematics Graduate Student Instructors Teaching for the First Time.</b> August 2024, Mathematical Association of America's MAA MathFest in Indianapolis, ID. <i>Research in Undergraduate Mathematics Education Special Session</i>. <a href="https://youtu.be/1TYHb2xk5Hg" target="_blank" style="color:#d00000"><b>Video Recording of the Talk</b></a> / <a href="/research/Cristobal_MathFest_2024_Slides.pdf" target="_blank" style="color:#d00000"><b>PDF of Slides</b></a>.</li>
-
-				<li><b>Coloring the Relationship of Frames and Responses in Teacher Noticing.</b> February 2024, 26th Research in Undergraduate Mathematics Education Conference in Omaha, NE. <a href="https://youtu.be/HE6XIPJRokY" target="_blank" style="color:#d00000"><b>Video Recording of the Talk</b></a> / <a href="/research/Cristobal_RUME_2024_Slides.pdf" target="_blank" style="color:#d00000"><b>PDF of Slides</b></a>.</li>
-			</ul>
+					But now, after co-leading an applied mathematics research project through a summer Research Experience for Undergraduates with another graduate student Michael Pieper, I was reminded of my interest in applied mathematics research. Not to stand at the pioneer's fronteir of PDEs, but this time, to help mentor and advise students who do want to go onto treading new ground in applied mathematics. <b>So, I'm pushing myself to be a mixed researcher of undergraduate mathematics education AND applied mathematics.</b>
+				</p>
+		  	</div>
 		</div>
 
-	<div class="lefty">
-	<h1> Research Writings </h1>
-		<ol class = "normal">
-			<li>
-				<b>Cristobal, J. B.</b> (submitted). From “Struggle” to “Acceptance”: Andy’s Narrative of First-Time Teaching and Her Frames.
-			</li>
-			<li>
-				<b>Cristobal, J. B.</b> (submitted). Aspects of Culture and Context which Shape Frames of Teaching and Learning.
-			</li>
+		<div class="column">
+			<div class="card">
+				<h2> Peer-reviewed Research Writings </h2>
+				<ol class = "normal">
+					<li>
+						<b>Cristobal, J. B.</b> (Accepted). From “Struggle” to “Acceptance”: Andy’s Narrative of First-Time Teaching and Her Frames.
+					</li>
+					<li>
+						<b>Cristobal, J. B.</b> (Accepted). Aspects of Culture and Context which Shape Frames of Teaching and Learning.
+					</li>
+		
+					<li>
+						Funk, R., Pai, L., & <b>Cristobal, J. B.</b> (2024). “Persistence in a S-STEM grant: Understanding the Intersectional Experiences of Women Pursuing STEM.” <i>Conference Paper for the 2024 American Society for Engineering Education Annual Conference & Exposition.</i>
+					</li>
+					<li>
+						Funk, R., Pai, L., Rader, B., <b>Cristobal, J. B.</b>, & Lewis, J. (2024). “"Someone has invested in me to do this": Supporting Low-Income Students to Persist in STEM through a NSF S-STEM grant.” <i>Poster Paper for the 2024 American Society for Engineering Education Annual Conference & Exposition.</i>
+					</li>
+		
+					<li> <b>Cristobal, J. B.</b> (2024). Complicating the Relationship of Frames and Responses in Teacher Noticing. In Cook S., Katz, B., Moore-Russo, D. (Eds.), <i>Proceedings of the 26th Annual Conference on Research in Undergraduate Mathematics Education,</i> Omaha, Nebraska (pp. 268-276). <a href="http://sigmaa.maa.org/rume/crume2024/papers/047.pdf" target="_blank" style="color:#d00000"><b>PDF</b></a>.
+		
+					</li>
+		
+					<li><b>Cristobal, J.</b> (2021). Disjoint Paths and Matrix Determinants: A survey on Lindstrom-Gessel-Viennot Theorem. Survey Paper as a Final project for Math 852 Discrete Mathematics II. <a href="./LGV_Theorem_Survey_Cristobal.pdf" target="_blank" style="color:#d00000"><b>PDF</b></a>.</li>
+				</ol>
+		  	</div>
+		</div>
 
-			<li>
-				Funk, R., Pai, L., & <b>Cristobal, J. B.</b> (2024). “Persistence in a S-STEM grant: Understanding the Intersectional Experiences of Women Pursuing STEM.” <i>Conference Paper for the 2024 American Society for Engineering Education Annual Conference & Exposition.</i>
-			</li>
-			<li>
-				Funk, R., Pai, L., Rader, B., <b>Cristobal, J. B.</b>, & Lewis, J. (2024). “"Someone has invested in me to do this": Supporting Low-Income Students to Persist in STEM through a NSF S-STEM grant.” <i>Poster Paper for the 2024 American Society for Engineering Education Annual Conference & Exposition.</i>
-			</li>
+		<div class="column">
+			<div class="card">
+				<h2> Research Conference Talks </h2>
+				<ul class = "normal">
+					<li><b>Success, Struggle, Surprise, and Short-term Goals: Reflections from Mathematics Graduate Students Teaching.</b> January 2025, Joint Mathematics Meetings in Seattle, WA. <i>AMS Special Session on Research Presentations by Math Alliance Scholar Doctorates, II</i>. </li>
+						<ul>
+							<li><a href="https://youtu.be/ht0_geTrGRc" target="_blank" style="color:#d00000"><b>Video Recording of the Talk</b></a>. </li>
+							<li><a href="/research/JMM_2025_MathAlliance.pdf" target="_blank" style="color:#d00000"><b>PDF of Slides</b></a>.</li>
+						</ul>
 
-			<li> <b>Cristobal, J. B.</b> (2024). Complicating the Relationship of Frames and Responses in Teacher Noticing. In Cook S., Katz, B., Moore-Russo, D. (Eds.), <i>Proceedings of the 26th Annual Conference on Research in Undergraduate Mathematics Education,</i> Omaha, Nebraska (pp. 268-276). <a href="http://sigmaa.maa.org/rume/crume2024/papers/047.pdf" target="_blank" style="color:#d00000"><b>PDF</b></a>.
+					<li><b>One graduate students' experience teaching for the first time.</b> January 2025, Joint Mathematics Meetings in Seattle, WA. <i>AMS Contributed Paper Session on Mathematics Education, I</i>.</li>
+						<ul>
+							<li><a href="https://youtu.be/gFIJFILrZkE" target="_blank" style="color:#d00000"><b>Video Recording of the Talk</b></a>. </li>
+							<li><a href="/research/JMM_2025_AMS_MathEd.pdf" target="_blank" style="color:#d00000"><b>PDF of Slides</b></a>.</li>
+						</ul>
 
-			</li>
+					<li><b>Successes, Struggles, Surprises, and Short-term Goals of Mathematics Graduate Student Instructors Teaching for the First Time.</b> August 2024, Mathematical Association of America's MAA MathFest in Indianapolis, ID. <i>Research in Undergraduate Mathematics Education Special Session</i>.</li>
+						<ul>
+							<li><a href="https://youtu.be/1TYHb2xk5Hg" target="_blank" style="color:#d00000"><b>Video Recording of the Talk</b></a>. </li>
+							<li><a href="/research/Cristobal_MathFest_2024_Slides.pdf" target="_blank" style="color:#d00000"><b>PDF of Slides</b></a>.</li>
+						</ul>
 
-			<li>July 2021, Lindstrom-Gessel-Viennot Theorem Survey Paper <a href="/LGV_Theorem_Survey_Cristobal.pdf" target="_blank" style="color:#d00000"><b>PDF</b></a>.</li>
-		</ol>
-
-		<p>In Progress:</p>
-		<ul class = "normal">
-			<li>
-				Funk, R., Pai, L., <b>Cristobal, J. B.</b>, & Xie, N. (in-progress). From “Struggle” to “Acceptance”: Andy’s Narrative of First-Time Teaching and Her Frames.
-			</li>
-			<li>
-				<b>Cristobal, J. B.</b> (in-progress). Looking Inside the Black Box: Frames in the Context of Teaching Mathematics.
-			</li>
-		</ul>
-	</div>
+					<li><b>Coloring the Relationship of Frames and Responses in Teacher Noticing.</b> February 2024, 26th Research in Undergraduate Mathematics Education Conference in Omaha, NE.
+						<ul>
+							<li><a href="https://youtu.be/HE6XIPJRokY" target="_blank" style="color:#d00000"><b>Video Recording of the Talk</b></a>. </li>
+							<li><a href="/research/Cristobal_RUME_2024_Slides.pdf" target="_blank" style="color:#d00000"><b>PDF of Slides</b></a>.</li>
+						</ul>
+				</ul>
+		  	</div>
+		</div>
 
 	<div class="PAD"></div>
 
