@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Resources</title>
+	<link rel="stylesheet" href="css/common.css" type="text/css" />
+	<link rel="stylesheet" href="css/responsive.css" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet"/>
+	<link rel="icon" type="image/png" href="./img/Favicon.png" />
+</head>
+
+<style = "css">
+	html {
+		height:100%;
+	}
+	body {
+		max-width: 100%;
+		margin: auto;
+		font-family: 'Roboto', sans-serif;
+		background-color: #E6E6E6;	
+	}
+	h2 {
+		padding-left: 10px;
+	}
+	h3 {
+		padding-left: 15px;
+		margin-bottom: -10px;
+	}
+	p {
+		padding-left: 10px;
+		padding-right: 10px;
+		font-size: 15px;
+	}
+	a { text-decoration: none; font-style: bold; }
+	a:link { color: rgb(255, 0, 0); }
+	a:visited { color: red; }
+	a:hover { color: red; }
+	a:active { color: red; }
+	hr { opacity: 1.0; max-width: 85%;}
+	/* Menu Stuff */
+	ul.special {
+	  list-style-type: none;
+	  margin: 0;
+	  padding: 0;
+	  overflow: hidden;
+	  background-color: #d1d1d1;
+	}
+	li.special {  border-right: 1px solid #E6E6E6; float: left; }
+	li.special a {
+	  display: block;
+	  color: black;
+	  text-align: center;
+	  padding: 10px 12px;
+	  text-decoration: none;
+	}
+	li.special a:hover:not(.active) {  background-color: #F07B7B;}
+	.active {  background-color: #e75c5c;}
+
+	div.PAD {
+		padding-bottom:5em;
+	}
+	ol.normal,ul.normal {
+		max-width: 100%;
+		font-size: 14px;
+		padding-left: 2em;
+		padding-bottom:1em;
+	}
+
+	/* Float four columns side by side */
+	.column {
+		float: left;
+		width: 48%;
+		padding: 0 10px;
+		padding-top: 10px;
+	}
+
+	/* Remove extra left and right margins, due to padding 
+	.row {margin: 0 -5px;}*/
+
+	/* Clear floats after the columns */
+	.row:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+	/* Responsive columns */
+	@media screen and (max-width: 600px) {
+		.column {
+			width: 94%;
+			display: block;
+		}
+	}
+
+	@media screen and (min-width: 1500px) {
+        .column{
+			float: left;
+			width: 23.9%;
+			padding: 0 10px;
+			padding-top: 10px;
+        }
+    }
+
+	/* Style the counter cards */
+	.card {
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+		padding: 16px;
+		text-align: left;
+		background-color: #f1f1f1;
+		margin-top: 1em;
+	}
+
+	.card img {
+		max-width: 100%;
+		text-align: left;
+	}
+
+</style>
+
+<body link = "white">
+	<font color = "black">
+
+	<!-- Menu -->
+	<ul class = "special">
+	  <li class = "special"><a href = "https://www.johanmath.com/" target = "_self">🏠</a></li>
+	  <li class = "special"><a href = "/about" target = "_self">BIO</a></li>
+	  <li class = "special"><a href = "/teaching" target = "_self">TEACHING</a></li>
+	  <li class = "special"><a class = "/research" target = "_self">RESEARCH</a></li>
+	  <li class = "special"><a class = "active" target = "_self">RESOURCES</a></li>
+	  <li class = "special"><a href = "/writings" target = "_self">WRITINGS</a></li>	  
+	  <li class = "special"><a href = "/design" target = "_self">ART</a></li>
+	</ul>
+
+	<!-- Actual Body -->
+	<h3>This page is dedicated to sharing things that I have collected over the years that may be useful to students and peers. If these links do not work, please let me know via email.</h3> 
+	
+	<div class="row">
+		<div class="column">
+			<div class="card">
+				<h2>Notes from Classes I Took</h2>
+				<p> This <a href="https://drive.google.com/drive/folders/1qfBbyuq5HaE51UX77vtB_y9-F-FhitNH?usp=sharing" target="_blank"><b>Google Drive folder</b></a> contains all notes I have from my undergraduate courses at UCLA. It contains the following courses:</p>
+				<ul>
+					<li>Computer Science 33: Computer Organization</li>
+					<li>Computer Science 161: Fundamentals of Artificial Intelligence</li>
+					<li>Computer Science 181: Formal Languages and Automata Theory</li>
+					<li>Math 131A: Real Analysis</li>
+					<li>Math 134: Linear and Nonlinear Systems of Differential Equations</li>
+					<li>Math 135: Ordinary Differential Equations</li>
+					<li>Math 136: Partial Differential Equations</li>
+					<li>Math 151A: Applied Numerical Methods I</li> 
+					<li>Math 151B: Applied Numerical Methods II</li>
+					<li>Math 156: Machine Learning</li>
+					<li>Math 164: Optimization</li>
+					<li>Math 170: Probability Theory</li>
+					<li>Math 180: Algorithms</li>
+					<li>Physics 1C: Electrodynamics, Optics, and Special Relativity</li>
+				</ul>
+
+				<p> This <a href="https://drive.google.com/drive/folders/1P2IUhJy9IJ8fWk8GugbKq0W0RRv0NebO?usp=sharing" target="_blank"><b>Google Drive folder</b></a> contains all notes (qualifying exam notes, exam answers, etc.) I have from my graduate courses at UNL. It contains the following courses:</p>
+				<!--PRINT OUT NOTES FROM ONENOTE-->
+				<ul>
+					<li>Math 817-818: Modern Algebra I and II</li>
+					<li>Math 825-826: Analysis I and II</li>
+					<li>Math 830-831: Differential Equations I and II</li>
+					<li>Math 833: Nonlinear Optimization</li>
+					<li>Math 853: Geometry and Probability in High Dimensions (Applications to Data Science)</li>
+					<li>Math 921-922: Measure Theory I and II</li>
+					<li>Math 928: Functional Analysis</li>
+					<li>Math 934: Fluid Dynamics (Topics in Differential Equations)</li>
+					<li>Math 941: Partial Differential Equations</li>
+				</ul>
+		  	</div>
+		</div>
+		
+		<div class="column">
+			<div class="card" style="padding-top: 1em;">
+				<h2>Math PhD Application Materials</h2>
+				<p>
+					I am choosing to courageously share these files so prospective graduate students, especially other first generation students like me, can have an example for materials. I do not want you to think these are exceptional examples. In retrospect, I actually think my application was juvenile. It was very clear that I did not know what graduate school actually was nor what I really wanted out of the programs I applied to. If anything, these are <i>non-examples</i> and you should interpret these as "baseline" what you should write.
+				</p>
+				<ul>
+					<li><a href="https://drive.google.com/file/d/1gTuebNP74LhtfHtrpXRFKRP2B4LnIGOM/view?usp=sharing" target="_blank">Undergraduate CV</a></li>
+					<li><a href="https://drive.google.com/file/d/1kACoWuE9JBAemEISYN5DRwIZup83IdWd/view?usp=sharing" target="_blank">Statement of Purpose to UNL</a></li>
+					<li><a href="https://drive.google.com/file/d/1HF_lCUAvhO8GZmeelpnzCtwGvoGCjrkv/view?usp=sharing" target="_blank">List of Courses</a></li>
+				</ul>
+				<p>
+					You might also hopefully find comfort knowing my unexceptional GRE scores that still got me into UNL:
+					<ul>
+						<li>Verbal Reasoning 154 (64th percentile)</li>
+						<li>Quantitative Reasoning 163 (82nd percentile)</li>
+						<li>Analytical Writing 4.0 (57th percentile)</li>
+						<li>Matematics Subject Test 660 (51st percentile)</li>
+					</ul>
+				</p>
+		  	</div>
+		</div>
+
+		<!--<div class="column">
+			<div class="card">
+				<h2>Job Search Materials</h2>
+				<p>
+					Just like the Math PhD Application Materials, I am choosing to shamelessly share these files so people can have some examples to build from when they are writing their materials. Again, I am not an exceptional applicant, but I did learn a thing or two from my PhD Applications.
+				</p>
+				<ul>
+					<li>Cover Letter</li>
+					<li>Teaching Statement</li>
+					<li>Research Statement</li>
+					<li>Diversity Statement</li>
+				</ul>
+				<p>If I have one advice, it's to be very clear and gung-ho about the direction, trajectory, and motivation of your application. There should not be any doubt in your application; you are who they want and they are who you want.</p>
+		  	</div>
+		</div> -->
+
+		<div class="column">
+			<div class="card">
+				<h2>Videos</h2>
+				<p>
+					1. A playlist of vlogs chronologing my personal journey in applying to graduate school: <a href="https://www.youtube.com/playlist?list=PLK2oKg9Dz6JjLuMra0qdNZsHl0MCJvw4Z" target="_blank"><b>Graduate School Application series</b></a>.
+				</br> </br>
+					2. A playlist of vlogs chronologing my personal journey through my PhD: <a href="https://www.youtube.com/playlist?list=PLK2oKg9Dz6JhDdU70OO4Rmo0l-HaWr_NZ" target="_blank"><b>Graduate School Diary series</b></a>.
+				</br> </br>
+					3. Naming the reasons why I was staying in my PhD </br> </br>
+				<iframe width="420" height="236" src="https://www.youtube.com/embed/aKxXt18-KLA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</br> </br>
+					<b>Video ideas for the future:</b> How I write mathematics education research papers / How I wrote my job application materials / Tips for sticking it out during your PhD / more!
+				</p>
+		  	</div>
+		</div>
+
+	<div class="PAD"></div>
+
+</font> 
+</body>
+</html>
